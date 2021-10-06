@@ -16,8 +16,7 @@ namespace SecondHandMarket.Web
                         "~/js/jquery.cookie.js",
                         "~/js/bootstrap.min.js",
                         "~/js/bootstrap3-typeahead.js",
-                        "~/js/site.js",
-                        "~/js/tinymce/tinymce.min.js"
+                        "~/js/site.js"
                         ));
 
             bundles.Add(new StyleBundle("~/css").Include(

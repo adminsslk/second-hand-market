@@ -11,36 +11,34 @@
     @Styles.Render("~/css")
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
     @Scripts.Render("~/modernizr")
-    <!--<script src="/bytesmarknad/js/tinymce/tinymce.min.js"></script>-->
-
 </head>
-    <body>
-        <!-- Modal -->
-        <div class="modal" id="item-dialog" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" data-backdrop="static">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                        <h4 class="modal-title">Modal title</h4>
-                    </div>
-                    <div class="modal-body">
-                        <p>One fine body…</p>
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal-dialog -->
-        </div>
+<body>
+    <!-- Modal -->
+    <div class="modal" id="item-dialog" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" data-backdrop="static">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    <h4 class="modal-title">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    <p>One fine body…</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div>
 
-        <!-- Navigation -->
-        <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
-        <nav id="sidebar-wrapper">
-            <ul class="sidebar-nav">
-                <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
-                @if (Request.IsAuthenticated)
-                {
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            @if (Request.IsAuthenticated)
+            {
                 <li class="sidebar-page">
                     <a href="~/admin">@Model.GetLoggedOnUser().FullName</a>
                 </li>
@@ -50,39 +48,40 @@
                 <li>
                     <a href="~/account/logoff">Logga ut</a>
                 </li>
-                }
-                else
-                {
-                    <li class="sidebar-page">
-                        SSLK Bytesmarknad
-                    </li>
-                    <li>
-                        <a href="~/account/login">Logga in</a>
-                    </li>
-                }
-            </ul>
-        </nav>
+            }
+            else
+            {
+                <li class="sidebar-page">
+                    SSLK Bytesmarknad
+                </li>
+                <li>
+                    <a href="~/account/login">Logga in</a>
+                </li>
+            }
+        </ul>
+    </nav>
 
-        <div class="container">
-            <div class="row">
-                <h1><img src="~/img/logo1.jpg" width="100" /> SSLK BYTESMARKNAD @Model.ActiveYear</h1>
-                @if (Request.IsAuthenticated)
-                {
+    <div class="container">
+        <div class="row">
+            <h1><img src="~/img/logo1.jpg" width="100" /> SSLK BYTESMARKNAD @Model.ActiveYear</h1>
+            @if (Request.IsAuthenticated)
+            {
                 <span class="pull-right text-uppercase"><a href="#" data-id="@Model.GetLoggedOnUser().Id" class="edit-user">@Model.GetLoggedOnUser().FullName</a></span>
-                }
-            </div>
+            }
         </div>
-        <br />
+    </div>
+    <br />
 
-        @RenderBody()
+    @RenderBody()
 
-        <script type="text/javascript">
+    <script type="text/javascript">
             var host = '@Url.Content("~")';
             var isTouchDevice = 'ontouchstart' in document.documentElement;
-        </script>
+    </script>
 
-        @Scripts.Render("~/js")
-        @RenderSection("scripts", required: false)
-        
-    </body>
+    @Scripts.Render("~/js")
+    <script src="/bytesmarknad/js/tinymce/tinymce.min.js"></script>
+    @RenderSection("scripts", required: false)
+
+</body>
 </html>
