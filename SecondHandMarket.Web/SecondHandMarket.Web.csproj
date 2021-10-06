@@ -217,7 +217,7 @@
     <Compile Include="ViewModels\ViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include=".gitignore" />
+    <None Include=".gitignore" />
     <Content Include="content\bg2.jpg" />
     <Content Include="content\bg3.jpg" />
     <Content Include="css\bootstrap.css" />
@@ -540,6 +540,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="published\" />
     <Folder Include="tmp\" />
   </ItemGroup>
   <ItemGroup>
