@@ -549,9 +549,9 @@
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\SecondHandMarket.Core\SecondHandMarket.Core.csproj">
+    <ProjectReference Include="..\SecondHandMarket.Database\SecondHandMarket.Database.csproj">
       <Project>{3da7992f-e138-40b3-9f08-2a4eb5d4cccb}</Project>
-      <Name>SecondHandMarket.Core</Name>
+      <Name>SecondHandMarket.Database</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

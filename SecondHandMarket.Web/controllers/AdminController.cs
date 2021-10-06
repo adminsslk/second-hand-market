@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SecondHandMarket.Core;
+using SecondHandMarket.Database;
 using Excel;
 using System.Text.RegularExpressions;
 using SecondHandMarket.Web.ViewModels.Admin;
@@ -196,7 +196,7 @@ namespace SecondHandMarket.Web.Controllers
             SecondHandMarketContext ctx = new SecondHandMarketContext();
             User user = ctx.Users.Where(u => u.Phone == phone).FirstOrDefault();
 
-            SecondHandMarket.Core.User jsonUser = new Core.User();
+            SecondHandMarket.Database.User jsonUser = new Database.User();
             if (user != null)
             {
                 jsonUser.Phone = user.Phone;

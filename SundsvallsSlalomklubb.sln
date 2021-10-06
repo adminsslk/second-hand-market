@@ -7,7 +7,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Bytemarknad", "Bytemarknad"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondHandMarket.Web", "SecondHandMarket.Web\SecondHandMarket.Web.csproj", "{F10A3533-ACDE-4531-82D6-E570F90BAC62}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondHandMarket.Core", "SecondHandMarket.Core\SecondHandMarket.Core.csproj", "{3DA7992F-E138-40B3-9F08-2A4EB5D4CCCB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecondHandMarket.Database", "SecondHandMarket.Database\SecondHandMarket.Database.csproj", "{3DA7992F-E138-40B3-9F08-2A4EB5D4CCCB}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

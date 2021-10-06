@@ -6,7 +6,7 @@ using System.Web.Mvc;
 using SecondHandMarket.Web.ViewModels.Settings;
 using System.IO;
 using System.Net;
-using SecondHandMarket.Core;
+using SecondHandMarket.Database;
 
 namespace SecondHandMarket.Web.Controllers
 {

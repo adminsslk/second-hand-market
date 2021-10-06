@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SecondHandMarket.Core;
+using SecondHandMarket.Database;
 
 namespace SecondHandMarket.Web
 {
@@ -11,7 +11,7 @@ namespace SecondHandMarket.Web
         public static void InsertUser(string firstName, string lastName, string email, string phone, string password, bool isMember, string bank, string clearingNumber, string accountNumber, int roleId)
         {
             SecondHandMarketContext ctx = new SecondHandMarketContext();
-            User user = new Core.User();
+            User user = new Database.User();
             user.FirstName = firstName;
             user.LastName = lastName;
             user.Email = email;

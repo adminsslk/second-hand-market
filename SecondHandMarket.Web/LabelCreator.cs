@@ -5,7 +5,7 @@ using System.Windows;
 using System.IO;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
-using SecondHandMarket.Core;
+using SecondHandMarket.Database;
 
 namespace SecondHandMarket.Web
 {

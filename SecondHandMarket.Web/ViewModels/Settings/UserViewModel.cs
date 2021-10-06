@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
-using SecondHandMarket.Core;
+using SecondHandMarket.Database;
 
 namespace SecondHandMarket.Web.ViewModels.Settings
 {

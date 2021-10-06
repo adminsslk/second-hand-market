@@ -1,4 +1,4 @@
-namespace SecondHandMarket.Core
+namespace SecondHandMarket.Database
 {
     using System;
     using System.Collections.Generic;

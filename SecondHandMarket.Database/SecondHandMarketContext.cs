@@ -1,16 +1,13 @@
 using System;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Data.Entity;
-using System.Linq;
 
-namespace SecondHandMarket.Core
+namespace SecondHandMarket.Database
 {
-    public partial class SecondHandMarketContext : DbContext
+    public class SecondHandMarketContext : DbContext
     {
-        public SecondHandMarketContext()
-            : base("name=SecondHandMarketContext")
+        public SecondHandMarketContext() : base("name=SecondHandMarketContext")
         {
-            Database.SetInitializer(new SecondHandMarketDBInitializer());
+            System.Data.Entity.Database.SetInitializer(new SecondHandMarketDBInitializer());
         }
 
         public virtual DbSet<FrontPageSection> FrontPageSections { get; set; }

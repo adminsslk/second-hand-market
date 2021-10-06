@@ -4,7 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Security;
-using SecondHandMarket.Core;
+using SecondHandMarket.Database;
 
 namespace SecondHandMarket.Web.Controllers
 {
@@ -25,7 +25,7 @@ namespace SecondHandMarket.Web.Controllers
         public ActionResult Login(string email, string password)
         {
             SecondHandMarketContext ctx = new SecondHandMarketContext();
-            Core.User user = ctx.Users.Where(u => u.Email == email).FirstOrDefault();
+            User user = ctx.Users.Where(u => u.Email == email).FirstOrDefault();
             if (user != null && user.Password == password && (user.RoleId == 2 || user.RoleId == 3))
             {
                 FormsAuthentication.SetAuthCookie(email, true);

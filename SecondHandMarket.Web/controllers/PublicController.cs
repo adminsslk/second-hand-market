@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using SecondHandMarket.Core;
+using SecondHandMarket.Database;
 using SecondHandMarket.Web.Models;
 using SecondHandMarket.Web.ViewModels.Public;
 
@@ -40,7 +40,7 @@ namespace SecondHandMarket.Web.Controllers
             viewModel.ActiveYear = Convert.ToInt32(ctx.GlobalSettings.Find("ActiveYear").Value);
             viewModel.SearchString = search;
             
-            SecondHandMarket.Core.User user = ctx.Users.Where(u => u.Phone == search).FirstOrDefault();
+            SecondHandMarket.Database.User user = ctx.Users.Where(u => u.Phone == search).FirstOrDefault();
 
             if (user != null)
             {

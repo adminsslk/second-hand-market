@@ -7,8 +7,8 @@
     <ProjectGuid>{3DA7992F-E138-40B3-9F08-2A4EB5D4CCCB}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>SecondHandMarket.Core</RootNamespace>
-    <AssemblyName>SecondHandMarket.Core</AssemblyName>
+    <RootNamespace>SecondHandMarket.Database</RootNamespace>
+    <AssemblyName>SecondHandMarket.Database</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />

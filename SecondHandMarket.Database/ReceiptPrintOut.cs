@@ -1,4 +1,4 @@
-namespace SecondHandMarket.Core
+namespace SecondHandMarket.Database
 {
     using System;
     using System.Collections.Generic;
@@ -6,22 +6,18 @@ namespace SecondHandMarket.Core
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    public partial class ItemChangeLog
+    public partial class ReceiptPrintOut
     {
-        public long Id { get; set; }
+        public int Id { get; set; }
+
+        public int Year { get; set; }
 
         public DateTime TimeStamp { get; set; }
+
+        public int SalesmanId { get; set; }
 
         [Required]
         [StringLength(50)]
         public string UserName { get; set; }
-
-        public int ItemId { get; set; }
-
-        [Required]
-        [StringLength(250)]
-        public string Log { get; set; }
-
-        public int Year { get; set; }
     }
 }

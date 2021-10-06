@@ -4,13 +4,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SecondHandMarket.Core
+namespace SecondHandMarket.Database
 {
-    public partial class User
+    public partial class ItemChangeLog
     {
-        public string FullName
+        public ItemChangeLog()
         {
-            get { return FirstName + " " + LastName; }
+            Year = DateTime.Now.Year;
         }
     }
 }
