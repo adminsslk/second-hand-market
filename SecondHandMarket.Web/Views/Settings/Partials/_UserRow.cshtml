@@ -1,0 +1,33 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Settings
+@model UserViewModel
+
+<tr id="tr-user-@Model.User.Id">
+    <td><a style="cursor: pointer;" data-id="@Model.User.Id" onclick="showEditUserForm(@Model.User.Id)">@Model.User.FullName</a></td>
+    <td>@Model.User.Phone</td>
+    <td>@Model.User.Email</td>
+    <td align="center"><input id="is-member-checkbox-@Model.User.Id" type="checkbox" onclick="updateMembership(@Model.User.Id)" @if (Model.User.IsMember){ <text>checked</text> } /></td>
+    <td>
+        <div>
+            <div class="btn-group">
+                <button class="btn btn-sm btn-primary dropdown-toggle" type="button" id="item-status-button-@Model.User.Id" data-toggle="dropdown" title="Ändra roll">
+                    @Model.User.UserRole.Name
+                    &nbsp;<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu-@Model.User.Id">
+
+                    <li role="presentation"><a role="menuitem" tabindex="-1" class="update-user-role" onclick="updateUserRole(@Model.User.Id, 3)">Kassapersonal</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" class="update-user-role" onclick="updateUserRole(@Model.User.Id, 2)">Systemadminstratör</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" class="update-user-role" onclick="updateUserRole(@Model.User.Id, 4)">Säljare</a></li>
+                    <li role="presentation"><a role="menuitem" tabindex="-1" class="update-user-role" onclick="updateUserRole(@Model.User.Id, 5)">Återförsäljare</a></li>
+                </ul>
+
+            </div>
+        </div>
+    </td>
+    <td>
+        <button type="button" class="btn btn-sm btn-danger delete-user-button pull-right" title="Ta bort" data-id="@Model.User.Id" onclick="showDeleteUserForm(@Model.User.Id)">
+            <span class="fa fa-trash-o"></span>
+        </button>
+    </td>
+</tr>

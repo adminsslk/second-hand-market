@@ -1,0 +1,3270 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SSFResults Version="1.0.8.0.1">
+    <Race Id="14110" />
+    <Result Id="113873" Final="0">
+        <EntryClass Id="351">D 0-8</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>1</Bib>
+                    <Competitor Id="IID1931767">
+                        <Fiscode />
+                        <Lastname>Nordenberg</Lastname>
+                        <Firstname>Ylva</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-02-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>2</Bib>
+                    <Competitor Id="IID4345338">
+                        <Fiscode />
+                        <Lastname>Öman</Lastname>
+                        <Firstname>Felicia</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2010-09-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>3</Bib>
+                    <Competitor Id="IID2970558">
+                        <Fiscode />
+                        <Lastname>Kjellberg</Lastname>
+                        <Firstname>Iris</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-09-15</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>4</Bib>
+                    <Competitor Id="IID1928978">
+                        <Fiscode />
+                        <Lastname>Johansson</Lastname>
+                        <Firstname>Alexandra</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-04-19</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>5</Bib>
+                    <Competitor Id="IID2795415">
+                        <Fiscode />
+                        <Lastname>Ytterström</Lastname>
+                        <Firstname>Selma</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-03-10</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>6</Bib>
+                    <Competitor Id="IID3895298">
+                        <Fiscode />
+                        <Lastname>Rautio</Lastname>
+                        <Firstname>Elvira</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2012-02-11</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>7</Bib>
+                    <Competitor Id="IID2969099">
+                        <Fiscode />
+                        <Lastname>Abersten</Lastname>
+                        <Firstname>Tuva</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-05-16</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>8</Bib>
+                    <Competitor Id="IID2970617">
+                        <Fiscode />
+                        <Lastname>Nordin</Lastname>
+                        <Firstname>Filippa</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-04-15</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>9</Bib>
+                    <Competitor Id="IID2340417">
+                        <Fiscode />
+                        <Lastname>Haag</Lastname>
+                        <Firstname>Ida</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-04-07</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113869" Final="0">
+        <EntryClass Id="357">D 11-12</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>32</Bib>
+                    <Competitor Id="IID2128510">
+                        <Fiscode />
+                        <Lastname>Rasteby</Lastname>
+                        <Firstname>Filippa</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-03-24</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:43.47</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>33</Bib>
+                    <Competitor Id="IID3241583">
+                        <Fiscode />
+                        <Lastname>Söderlind</Lastname>
+                        <Firstname>Freja</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-12-30</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:52.96</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>34</Bib>
+                    <Competitor Id="IID2106095">
+                        <Fiscode />
+                        <Lastname>Andersson</Lastname>
+                        <Firstname>Klara</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-03-27</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:43.70</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>35</Bib>
+                    <Competitor Id="IID2042986">
+                        <Fiscode />
+                        <Lastname>Pettersson</Lastname>
+                        <Firstname>Moa</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-04-08</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>36</Bib>
+                    <Competitor Id="IID548065">
+                        <Fiscode />
+                        <Lastname>Kongsholm</Lastname>
+                        <Firstname>Sara</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-08-22</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.27</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>37</Bib>
+                    <Competitor Id="IID2325723">
+                        <Fiscode />
+                        <Lastname>Sjöström-Jonsson</Lastname>
+                        <Firstname>Matilda</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-03-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.68</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>38</Bib>
+                    <Competitor Id="IID970204">
+                        <Fiscode />
+                        <Lastname>Näsholm</Lastname>
+                        <Firstname>Lina</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-10-20</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:45.10</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>39</Bib>
+                    <Competitor Id="IID3512610">
+                        <Fiscode />
+                        <Lastname>Aikio</Lastname>
+                        <Firstname>Stephanié</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-07-25</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:47.64</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>40</Bib>
+                    <Competitor Id="IID2412479">
+                        <Fiscode />
+                        <Lastname>Turstedt</Lastname>
+                        <Firstname>Freja</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-06-11</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:43.72</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>41</Bib>
+                    <Competitor Id="IID1687880">
+                        <Fiscode />
+                        <Lastname>Björs</Lastname>
+                        <Firstname>Sandra</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-03-29</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:40.30</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>42</Bib>
+                    <Competitor Id="IID1577956">
+                        <Fiscode />
+                        <Lastname>Westlund</Lastname>
+                        <Firstname>Maria</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-11-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:52.64</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>43</Bib>
+                    <Competitor Id="IID1543930">
+                        <Fiscode />
+                        <Lastname>Nyberg</Lastname>
+                        <Firstname>Tine</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-08-16</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.85</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>44</Bib>
+                    <Competitor Id="IID2104552">
+                        <Fiscode />
+                        <Lastname>Lundström</Lastname>
+                        <Firstname>Sarah</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-06-01</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:41.10</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113867" Final="0">
+        <EntryClass Id="359">D 13-14</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>64</Bib>
+                    <Competitor Id="IID945319">
+                        <Fiscode />
+                        <Lastname>Backlund</Lastname>
+                        <Firstname>Liza</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-11-21</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:37.77</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>65</Bib>
+                    <Competitor Id="IID945403">
+                        <Fiscode />
+                        <Lastname>Näsholm</Lastname>
+                        <Firstname>Selma</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-03-11</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:42.34</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>66</Bib>
+                    <Competitor Id="IID2007717">
+                        <Fiscode />
+                        <Lastname>Jacobsson</Lastname>
+                        <Firstname>Nellie</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-05-28</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.22</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>67</Bib>
+                    <Competitor Id="IID2969106">
+                        <Fiscode />
+                        <Lastname>Edström Folke</Lastname>
+                        <Firstname>Lovisa</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-03-26</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.04</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>68</Bib>
+                    <Competitor Id="IID1481346">
+                        <Fiscode />
+                        <Lastname>Arab</Lastname>
+                        <Firstname>Cornelia</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-03-29</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:45.56</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>69</Bib>
+                    <Competitor Id="IID1405093">
+                        <Fiscode />
+                        <Lastname>Åberg</Lastname>
+                        <Firstname>Linn</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-04-25</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.10</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>70</Bib>
+                    <Competitor Id="IID474067">
+                        <Fiscode />
+                        <Lastname>Aicher</Lastname>
+                        <Firstname>Emma</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2003-11-13</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:35.35</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>71</Bib>
+                    <Competitor Id="IID1543307">
+                        <Fiscode />
+                        <Lastname>Eriksson</Lastname>
+                        <Firstname>Lina</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-08-19</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>72</Bib>
+                    <Competitor Id="IID913704">
+                        <Fiscode />
+                        <Lastname>Andersson</Lastname>
+                        <Firstname>Kajsa</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2003-11-15</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.71</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>73</Bib>
+                    <Competitor Id="IID3311347">
+                        <Fiscode />
+                        <Lastname>Hallberg</Lastname>
+                        <Firstname>Johanna</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2003-04-30</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.75</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>74</Bib>
+                    <Competitor Id="IID2007330">
+                        <Fiscode />
+                        <Lastname>Uppling</Lastname>
+                        <Firstname>Tilde</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-08-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.90</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>75</Bib>
+                    <Competitor Id="IID1574524">
+                        <Fiscode />
+                        <Lastname>Mårtensdotter</Lastname>
+                        <Firstname>Kajsa</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-10-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:42.11</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>76</Bib>
+                    <Competitor Id="IID913720">
+                        <Fiscode />
+                        <Lastname>Moberg</Lastname>
+                        <Firstname>Ebba</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-10-20</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:40.49</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113865" Final="0">
+        <EntryClass Id="361">D 15-16</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>87</Bib>
+                    <Competitor Id="IID565886">
+                        <Fiscode />
+                        <Lastname>Näsholm</Lastname>
+                        <Firstname>Alva</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-03-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:44.99</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>88</Bib>
+                    <Competitor Id="IID913670">
+                        <Fiscode />
+                        <Lastname>Schedin</Lastname>
+                        <Firstname>Ellen</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-02-09</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:37.89</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>89</Bib>
+                    <Competitor Id="IID560959">
+                        <Fiscode />
+                        <Lastname>Jonasson</Lastname>
+                        <Firstname>Astrid</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-05-02</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.04</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>90</Bib>
+                    <Competitor Id="IID560957">
+                        <Fiscode />
+                        <Lastname>Johansson</Lastname>
+                        <Firstname>Sofia</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2001-10-06</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:43.47</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>91</Bib>
+                    <Competitor Id="IID908226">
+                        <Fiscode />
+                        <Lastname>Persson</Lastname>
+                        <Firstname>Ellen</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-03-14</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.89</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>92</Bib>
+                    <Competitor Id="IID425737">
+                        <Fiscode />
+                        <Lastname>Solberg</Lastname>
+                        <Firstname>Emma</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-03-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:41.76</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>93</Bib>
+                    <Competitor Id="IID1687879">
+                        <Fiscode />
+                        <Lastname>Björs</Lastname>
+                        <Firstname>Andrea</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-08-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>94</Bib>
+                    <Competitor Id="IID1574407">
+                        <Fiscode />
+                        <Lastname>Kreij</Lastname>
+                        <Firstname>Adina</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-11-11</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.79</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>95</Bib>
+                    <Competitor Id="IID373007">
+                        <Fiscode />
+                        <Lastname>Borgsten</Lastname>
+                        <Firstname>Lisa</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2001-02-19</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>96</Bib>
+                    <Competitor Id="IID373008">
+                        <Fiscode />
+                        <Lastname>Eriksson</Lastname>
+                        <Firstname>Tilde</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2001-12-19</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.43</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>97</Bib>
+                    <Competitor Id="IID560944">
+                        <Fiscode />
+                        <Lastname>Folkesson</Lastname>
+                        <Firstname>Hilda</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2001-12-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:42.61</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113863" Final="0">
+        <EntryClass Id="363">D 17-</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>113</Bib>
+                    <Competitor Id="IID269472">
+                        <Fiscode />
+                        <Lastname>Olsson</Lastname>
+                        <Firstname>Kristin</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1998-07-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.57</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113861" Final="0">
+        <EntryClass Id="21">D 30-</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>102</Bib>
+                    <Competitor Id="IID565887">
+                        <Fiscode />
+                        <Lastname>Näsholm</Lastname>
+                        <Firstname>Eva</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1973-08-16</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:41.96</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113871" Final="0">
+        <EntryClass Id="355">D 9-10</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>16</Bib>
+                    <Competitor Id="IID1928977">
+                        <Fiscode />
+                        <Lastname>Johansson</Lastname>
+                        <Firstname>Isabelle</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2008-02-03</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>17</Bib>
+                    <Competitor Id="IID2007262">
+                        <Fiscode />
+                        <Lastname>Hamlund</Lastname>
+                        <Firstname>Alice</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2008-05-06</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:47.89</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>18</Bib>
+                    <Competitor Id="IID1641875">
+                        <Fiscode />
+                        <Lastname>Persson</Lastname>
+                        <Firstname>Clara</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-01-07</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:42.68</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>19</Bib>
+                    <Competitor Id="IID1575113">
+                        <Fiscode />
+                        <Lastname>Åberg</Lastname>
+                        <Firstname>Nora</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-05-14</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:44.69</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>20</Bib>
+                    <Competitor Id="IID1575032">
+                        <Fiscode />
+                        <Lastname>Svensson</Lastname>
+                        <Firstname>Malva</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2008-06-13</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>21</Bib>
+                    <Competitor Id="IID1931780">
+                        <Fiscode />
+                        <Lastname>Svelander</Lastname>
+                        <Firstname>Alva</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2008-01-29</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:44.92</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>110</Bib>
+                    <Competitor Id="IID2713254">
+                        <Fiscode />
+                        <Lastname>Werner</Lastname>
+                        <Firstname>Juna</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-07-23</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:57.24</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>111</Bib>
+                    <Competitor Id="IID3503227">
+                        <Fiscode />
+                        <Lastname>Olsson</Lastname>
+                        <Firstname>Jonna</Firstname>
+                        <Sex Sex="L" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2008-11-17</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113872" Final="0">
+        <EntryClass Id="352">H 0-8</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>10</Bib>
+                    <Competitor Id="IID3746929">
+                        <Fiscode />
+                        <Lastname>Allder</Lastname>
+                        <Firstname>Levi</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2010-03-15</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>11</Bib>
+                    <Competitor Id="IID2031251">
+                        <Fiscode />
+                        <Lastname>Nyberg</Lastname>
+                        <Firstname>Erik</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-01-22</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>12</Bib>
+                    <Competitor Id="IID3895297">
+                        <Fiscode />
+                        <Lastname>Rautio</Lastname>
+                        <Firstname>Albin</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2010-09-17</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>13</Bib>
+                    <Competitor Id="IID3227491">
+                        <Fiscode />
+                        <Lastname>Haugen</Lastname>
+                        <Firstname>Sigurd</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-05-19</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>14</Bib>
+                    <Competitor Id="IID3241586">
+                        <Fiscode />
+                        <Lastname>Söderlind</Lastname>
+                        <Firstname>Jesper</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2009-04-09</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNF">
+                    <Run>1</Run>
+                    <Bib>15</Bib>
+                    <Competitor Id="IID4472249">
+                        <Fiscode />
+                        <Lastname>Magnusson</Lastname>
+                        <Firstname>Vincent</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2010-11-25</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNF">0:00.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113868" Final="0">
+        <EntryClass Id="358">H 11-12</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>45</Bib>
+                    <Competitor Id="IID2912137">
+                        <Fiscode />
+                        <Lastname>Abersten</Lastname>
+                        <Firstname>Måns</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-11-15</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.96</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>46</Bib>
+                    <Competitor Id="IID2880638">
+                        <Fiscode />
+                        <Lastname>Kuzmin</Lastname>
+                        <Firstname>Andrei</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-03-11</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:43.87</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>47</Bib>
+                    <Competitor Id="IID565919">
+                        <Fiscode />
+                        <Lastname>Svensson</Lastname>
+                        <Firstname>Axel</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-07-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.46</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>48</Bib>
+                    <Competitor Id="IID1574519">
+                        <Fiscode />
+                        <Lastname>Malker</Lastname>
+                        <Firstname>Elliot</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-04-09</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:41.68</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>49</Bib>
+                    <Competitor Id="IID838952">
+                        <Fiscode />
+                        <Lastname>Aicher</Lastname>
+                        <Firstname>Maximilian</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-11-03</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.00</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>50</Bib>
+                    <Competitor Id="IID1687872">
+                        <Fiscode />
+                        <Lastname>Berggren</Lastname>
+                        <Firstname>Tim</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-11-23</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.36</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>51</Bib>
+                    <Competitor Id="IID2128543">
+                        <Fiscode />
+                        <Lastname>Hansson</Lastname>
+                        <Firstname>Robin</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-05-14</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:44.02</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>52</Bib>
+                    <Competitor Id="IID1906638">
+                        <Fiscode />
+                        <Lastname>Schedin</Lastname>
+                        <Firstname>Vilmer</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-03-14</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>53</Bib>
+                    <Competitor Id="IID2126124">
+                        <Fiscode />
+                        <Lastname>Strand</Lastname>
+                        <Firstname>Emil</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-10-14</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:42.27</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>54</Bib>
+                    <Competitor Id="IID1743417">
+                        <Fiscode />
+                        <Lastname>Silfer</Lastname>
+                        <Firstname>Leopold</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-02-23</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.24</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>55</Bib>
+                    <Competitor Id="IID2126117">
+                        <Fiscode />
+                        <Lastname>Kjellberg</Lastname>
+                        <Firstname>Frans</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-07-31</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:42.07</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>56</Bib>
+                    <Competitor Id="IID2126042">
+                        <Fiscode />
+                        <Lastname>Bylund</Lastname>
+                        <Firstname>Ludvig</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-02-08</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:40.06</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>57</Bib>
+                    <Competitor Id="IID1574619">
+                        <Fiscode />
+                        <Lastname>Rydberg</Lastname>
+                        <Firstname>Theodor</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-07-24</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:47.78</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>58</Bib>
+                    <Competitor Id="IID2089421">
+                        <Fiscode />
+                        <Lastname>Nordin</Lastname>
+                        <Firstname>William</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-02-15</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:40.44</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>59</Bib>
+                    <Competitor Id="IID3293144">
+                        <Fiscode />
+                        <Lastname>Kårberg</Lastname>
+                        <Firstname>Joel</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-11-08</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:48.63</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>60</Bib>
+                    <Competitor Id="IID2126040">
+                        <Fiscode />
+                        <Lastname>Heidorn</Lastname>
+                        <Firstname>Elias</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-10-20</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:44.57</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>61</Bib>
+                    <Competitor Id="IID1915641">
+                        <Fiscode />
+                        <Lastname>Lindqvist</Lastname>
+                        <Firstname>Edwin</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-03-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.73</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>62</Bib>
+                    <Competitor Id="IID1895822">
+                        <Fiscode />
+                        <Lastname>Nordsten</Lastname>
+                        <Firstname>Samuel</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2006-09-10</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:50.43</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>63</Bib>
+                    <Competitor Id="IID1047957">
+                        <Fiscode />
+                        <Lastname>Hamlund</Lastname>
+                        <Firstname>Hugo</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2005-10-14</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:39.57</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113866" Final="0">
+        <EntryClass Id="360">H 13-14</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>77</Bib>
+                    <Competitor Id="IID1409520">
+                        <Fiscode />
+                        <Lastname>Svelander</Lastname>
+                        <Firstname>Simon</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-06-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:37.44</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>78</Bib>
+                    <Competitor Id="IID548064">
+                        <Fiscode />
+                        <Lastname>Kongsholm</Lastname>
+                        <Firstname>Lucas</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2003-03-07</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:36.47</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>79</Bib>
+                    <Competitor Id="IID945255">
+                        <Fiscode />
+                        <Lastname>Nyberg</Lastname>
+                        <Firstname>Emil</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2003-05-19</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:35.20</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>80</Bib>
+                    <Competitor Id="IID1543968">
+                        <Fiscode />
+                        <Lastname>Persson</Lastname>
+                        <Firstname>Lukas</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2003-03-14</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:37.51</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>81</Bib>
+                    <Competitor Id="IID913735">
+                        <Fiscode />
+                        <Lastname>Isaksson</Lastname>
+                        <Firstname>Rasmus</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-03-10</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>82</Bib>
+                    <Competitor Id="IID1404834">
+                        <Fiscode />
+                        <Lastname>Nordenberg</Lastname>
+                        <Firstname>Arvid</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-10-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:46.44</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>83</Bib>
+                    <Competitor Id="IID1405095">
+                        <Fiscode />
+                        <Lastname>Westlund</Lastname>
+                        <Firstname>Wilhelm</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-04-07</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:41.96</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>84</Bib>
+                    <Competitor Id="IID560953">
+                        <Fiscode />
+                        <Lastname>Vennerström</Lastname>
+                        <Firstname>Hugo</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2003-03-27</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:35.93</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>85</Bib>
+                    <Competitor Id="IID565916">
+                        <Fiscode />
+                        <Lastname>Svensson</Lastname>
+                        <Firstname>Isac</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2003-09-24</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>86</Bib>
+                    <Competitor Id="IID1543225">
+                        <Fiscode />
+                        <Lastname>Malker</Lastname>
+                        <Firstname>Filip</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2004-05-15</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:37.32</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113864" Final="0">
+        <EntryClass Id="362">H 15-16</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>98</Bib>
+                    <Competitor Id="IID933274">
+                        <Fiscode />
+                        <Lastname>Lundström</Lastname>
+                        <Firstname>Jacob</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-04-22</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:34.78</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>99</Bib>
+                    <Competitor Id="IID906609">
+                        <Fiscode />
+                        <Lastname>Granhammar</Lastname>
+                        <Firstname>Nils</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2002-07-18</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:38.19</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>100</Bib>
+                    <Competitor Id="IID269422">
+                        <Fiscode />
+                        <Lastname>Allder</Lastname>
+                        <Firstname>Liam</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2001-12-07</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:34.78</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>101</Bib>
+                    <Competitor Id="IID207665">
+                        <Fiscode />
+                        <Lastname>Lindqvist</Lastname>
+                        <Firstname>Gustaf</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2001-12-18</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:34.21</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113862" Final="0">
+        <EntryClass Id="364">H 17-</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified />
+        </AL_race>
+    </Result>
+    <Result Id="113860" Final="0">
+        <EntryClass Id="22">H 30-</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>103</Bib>
+                    <Competitor Id="IID3759178">
+                        <Fiscode />
+                        <Lastname>Strand</Lastname>
+                        <Firstname>Mikael</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1978-02-09</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:44.92</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>104</Bib>
+                    <Competitor Id="IID1714344">
+                        <Fiscode />
+                        <Lastname>Söderlind</Lastname>
+                        <Firstname>Joachim</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1969-06-26</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:44.30</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>105</Bib>
+                    <Competitor Id="IID132376">
+                        <Fiscode />
+                        <Lastname>Abersten</Lastname>
+                        <Firstname>Pär</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1974-03-08</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:35.89</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>106</Bib>
+                    <Competitor Id="IID2187427">
+                        <Fiscode />
+                        <Lastname>Rautio</Lastname>
+                        <Firstname>Jonatan</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1980-08-31</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:37.51</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>107</Bib>
+                    <Competitor Id="IID738042">
+                        <Fiscode />
+                        <Lastname>Moberg</Lastname>
+                        <Firstname>Henrik</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1977-11-27</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>108</Bib>
+                    <Competitor Id="IID2434355">
+                        <Fiscode />
+                        <Lastname>Sjölander</Lastname>
+                        <Firstname>Anders</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1973-09-08</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:49.12</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNS">
+                    <Run>1</Run>
+                    <Bib>109</Bib>
+                    <Competitor Id="IID2007251">
+                        <Fiscode />
+                        <Lastname>Hamlund</Lastname>
+                        <Firstname>Jonas</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1981-03-26</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="DNS" />
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>112</Bib>
+                    <Competitor Id="IID1251597">
+                        <Fiscode />
+                        <Lastname>Ytterström</Lastname>
+                        <Firstname>Daniel</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>1977-01-16</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:51.30</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+    <Result Id="113870" Final="0">
+        <EntryClass Id="356">H 9-10</EntryClass>
+        <EntryDiscipline Id="0" Distance="">Storslalom</EntryDiscipline>
+        <Raceheader Sector="AL" Sex="M">
+            <Season>2017</Season>
+            <Codex />
+            <Nation>SWE</Nation>
+            <Discipline>GS</Discipline>
+            <Category>Ung</Category>
+            <Racedate>
+                <Day>27</Day>
+                <Month>02</Month>
+                <Year>2017</Year>
+            </Racedate>
+            <Eventname>SSLK Trofén 3</Eventname>
+            <Place />
+            <TD Function="Delegate">
+                <Tdnumber />
+                <Tdlastname />
+                <Tdfirstname />
+                <Tdnation />
+            </TD>
+        </Raceheader>
+        <AL_race>
+            <Jury Function="Chiefrace">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Jury Function="Referee">
+                <Jurylastname />
+                <Juryfirstname />
+                <Jurynation />
+            </Jury>
+            <Course Run="1">
+                <Homologation />
+                <Starttime />
+                <Gates />
+                <Turninggates />
+                <Startelev />
+                <Finishelev />
+                <Length />
+                <Coursetter>
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Coursetter>
+                <Forerunner Order="1">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="2">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="3">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="4">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forerunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forerunner>
+                <Forrunner Order="5">
+                    <Lastname />
+                    <Firstname />
+                    <Nation />
+                </Forrunner>
+            </Course>
+            <AL_raceinfo>
+                <Snow />
+                <Weather />
+                <Temperatureatstart />
+                <Temperatureatfinish />
+                <Timingby />
+                <Dataprocessingby>SSF Timing 2014/15 release 1 Swedish Ski Association</Dataprocessingby>
+                <Usedfislist>10</Usedfislist>
+                <Appliedpenalty />
+                <Calculatedpenalty />
+                <Fvalue>980</Fvalue>
+                <Runs>2</Runs>
+            </AL_raceinfo>
+            <AL_classified />
+            <AL_notclassified>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>22</Bib>
+                    <Competitor Id="IID2309479">
+                        <Fiscode />
+                        <Lastname>Bylund</Lastname>
+                        <Firstname>Vilgot</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2008-03-04</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:50.22</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>23</Bib>
+                    <Competitor Id="IID1574370">
+                        <Fiscode />
+                        <Lastname>Jonasson</Lastname>
+                        <Firstname>Malte</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-12-27</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:44.66</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>24</Bib>
+                    <Competitor Id="IID2128511">
+                        <Fiscode />
+                        <Lastname>Nordsten</Lastname>
+                        <Firstname>Oskar</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-12-08</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:43.14</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DSQ">
+                    <Run>1</Run>
+                    <Bib>25</Bib>
+                    <Competitor Id="IID3506727">
+                        <Fiscode />
+                        <Lastname>Franke</Lastname>
+                        <Firstname>Gunnar</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-10-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <Gate>Fall i branten</Gate>
+                    <AL_result>
+                        <Time Run="1" Status="DSQ">0:50.36</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>26</Bib>
+                    <Competitor Id="IID2340679">
+                        <Fiscode />
+                        <Lastname>Silfer</Lastname>
+                        <Firstname>Vincent</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2008-03-07</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:42.94</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>27</Bib>
+                    <Competitor Id="IID2126019">
+                        <Fiscode />
+                        <Lastname>Heidorn</Lastname>
+                        <Firstname>Elliot</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2008-04-12</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:45.22</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>28</Bib>
+                    <Competitor Id="IID1641869">
+                        <Fiscode />
+                        <Lastname>Persson</Lastname>
+                        <Firstname>Calle</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-01-07</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:41.44</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>29</Bib>
+                    <Competitor Id="IID2348402">
+                        <Fiscode />
+                        <Lastname>Moberg</Lastname>
+                        <Firstname>Axel</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-09-10</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:41.83</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>30</Bib>
+                    <Competitor Id="IID1895986">
+                        <Fiscode />
+                        <Lastname>Boman Wicksell</Lastname>
+                        <Firstname>Gustav</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-08-05</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:48.91</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+                <AL_notranked Status="DNQ">
+                    <Run>2</Run>
+                    <Bib>31</Bib>
+                    <Competitor Id="IID1895971">
+                        <Fiscode />
+                        <Lastname>Uppling</Lastname>
+                        <Firstname>Ludvig</Firstname>
+                        <Sex Sex="M" />
+                        <Nation>SWE</Nation>
+                        <Birthdate>2007-03-20</Birthdate>
+                        <Organization Id="8535">Sundsvalls SLK</Organization>
+                    </Competitor>
+                    <AL_result>
+                        <Time Run="1" Status="OK">0:47.90</Time>
+                        <Time Run="2" Status="" />
+                    </AL_result>
+                </AL_notranked>
+            </AL_notclassified>
+        </AL_race>
+    </Result>
+</SSFResults>
+

@@ -1,0 +1,61 @@
+﻿@using SecondHandMarket.Web.ViewModels.Admin
+@model SettingsViewModel
+
+@section Scripts
+{
+    <script src="~/js/admin/settings.js"></script>
+    <script src="~/js/admin/users.js"></script>
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Nav tabs -->
+        <ul id="main-tabs" class="nav nav-tabs" role="tablist">
+            <li id="li-checkout-tab"> <a href="@Url.Action("checkout", "admin")" id="items-tab">KASSAN</a></li>
+            <li id="li-items-tab"> <a href="@Url.Action("items", "admin")" id="items-tab">VAROR</a></li>
+            @if (Model.GetLoggedOnUser().RoleId == 2)
+            {
+                <li id="li-stats-tab"><a href="@Url.Action("stats", "admin")" id="stats-tab">FÖRSÄLJNINGSSTATISTIK</a></li>
+                <li id="li-settings-tab" role="presentation" class="pull-right active"><a href="@Url.Action("settings", "admin")" id="stats-tab"><span class="fa fa-cog" title="Inställningar"></span></a></li>
+            }
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="settings">
+                <br />
+                <!-- Nav tabs -->
+                <ul id="settings-tabs" class="nav nav-tabs" role="tablist">
+                    <li role="presentation" class="active"><a id="public-page-tab" href="#public-page" aria-controls="public-page" role="tab" data-toggle="tab">PUBLIKA SIDAN</a> </li>
+                    <li role="presentation" class=""><a id="users-tab" href="#users" aria-controls="users" role="tab" data-toggle="tab">ANVÄNDARE</a> </li>
+                    <li role="presentation" class=""><a id="content-tab" href="#content" aria-controls="content" role="tab" data-toggle="tab">FILBIBLOTEK</a> </li>
+                    <li role="presentation" class=""><a id="system-setting-tab" href="#system-setting" aria-controls="system-setting" role="tab" data-toggle="tab">SYSTEMINSTÄLLNINGAR</a> </li>
+                </ul>
+                    
+                <!-- Tab panes -->
+                <div class="tab-content">   
+                    <div role="tabpanel" class="tab-pane active" id="public-page">
+                        @Html.Partial("_FrontPageSettings", Model)
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="users">
+                        @Html.Partial("_Users", Model)
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="content">
+                        @Html.Partial("_Content", Model)
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="system-setting">
+                        @Html.Partial("_SystemSettings", Model)
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <hr>
+        <p class="text-muted">Utvecklat av <a href="http://www.it-e.se">IT-Entreprenörerna Sverige AB</a></p>
+    </div>
+</footer>

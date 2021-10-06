@@ -1,0 +1,16 @@
+﻿
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="@if (Model.SelectedSettingsTab == "users") { <text>active</text> }">
+        <a href="@Url.Action("users")">ANVÄNDARE</a> 
+    </li>
+    <li class="@if (Model.SelectedSettingsTab == "publicpage") { <text>active</text> }">
+        <a href="@Url.Action("publicpage", new { id = Model.ActiveYear })">PUBLIKA SIDAN</a> 
+    </li>
+    <li class="@if (Model.SelectedSettingsTab == "content") { <text>active</text> }">
+        <a href="@Url.Action("content")">FILBIBLOTEK</a> 
+    </li>
+    <li class="@if (Model.SelectedSettingsTab == "systemsettings") { <text>active</text> }">
+        <a href="@Url.Action("systemsettings")">SYSTEMINSTÄLLNINGAR</a>
+    </li>
+</ul>

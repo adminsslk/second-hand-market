@@ -1,0 +1,104 @@
+﻿@using SecondHandMarket.Web.ViewModels.Settings
+@using SecondHandMarket.Core
+@model SystemSettingsViewModel
+
+
+@section Scripts
+{
+    <script src="~/js/settings/systemsettings.js"></script>
+}
+
+@{var revenueShare = Model.GetRevenueShare() * 100;}
+
+<div class="container">
+    <div class="row">
+        <!-- Nav tabs -->
+        @Html.Partial("_Navigation")
+        <br />
+        @Html.Partial("_SettingsNavigation")
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active">
+                <br />
+                <div class="col-md-6">
+                    <br />
+                    <div class="lead">
+                        <div class="alert alert-danger">OBS! Ändra aldig aktivt år under pågående bytesmarknad</div>
+                    </div>
+                    <br />
+                    <form>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>Aktivit år: </td>
+                                    <td class="hidden edit">
+                                        <div class="dropdown pull-right">
+                                            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                @Model.ActiveYear
+                                                <span class="caret"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                @foreach (Year year in Model.GetYears())
+                                                {
+                                                    <li><a class="year-dropdown-item" href="#">@year.Value</a></li>
+                                                }
+                                            </ul>
+                                        </div>
+                                    </td>
+                                    <td class="text-right read">
+                                        @Model.ActiveYear
+                                    </td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>Försäljningsavgift: </td>
+                                    <td class="hidden edit">
+                                        <div class="form-group pull-right">
+                                            <input id="year-sales-cost" style="width: 70px;" class="form-control text-right" type="text" value="@Model.GetSalesCost()" />
+                                        </div>
+                                    </td>
+                                    <td class="text-right read">@Model.GetSalesCost()</td>
+                                    <td class="text-left">kr</td>
+                                </tr>
+                                <tr>
+                                    <td>Säljprovision: </td>
+                                    <td class="text-right hidden edit">
+                                        <div class="form-group pull-right">
+                                            <input id="year-revenue-share" style="width: 70px;" class="form-control" type="text" value="@revenueShare" />
+                                        </div>
+                                    </td>
+                                    <td class="text-right read">@revenueShare</td>
+                                    <td class="text-left">%</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+                    </form>
+                    <div class="read pull-right">
+                        <button id="edit-general-settings" class="btn btn-default ">ÄNDRA</button>
+                    </div>
+                    <div class="edit hidden pull-right">
+                        <button id="save-general-settings" class="btn btn-primary">SPARA</button>&nbsp;&nbsp;
+                        <button id="read-general-settings" class="btn btn-default">AVBRYT</button>
+                    </div>
+                    <br />
+
+
+                    <br /><br />
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

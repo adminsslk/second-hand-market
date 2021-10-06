@@ -1,0 +1,108 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+@model RegisterSalesmanViewModel
+
+<script src="~/js/admin/_RegisterSalesman.js"></script>
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h2 class="modal-title">INREGISTRERING</h2>
+        </div>
+
+        <div class="modal-body">
+            <h4>SÄLJARE</h4>
+            <hr />
+            <form id="new-saleman-form" action="@Url.Action("_RegisteredItems")" method="post" role="form" class="form-horizontal">
+                <input id="search-phone" name="phone" type="hidden" value="" />
+                <div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon min-width-100">MOBILNUMMER</div>
+                            <input id="salesman-phone" name="salesman.Phone" class="form-control min-width-300 numeric-textbox" type="text" value="" autocomplete="off">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon">FÖRNAMN</div>
+                            <input id="salesman-first-name" name="salesman.FirstName" class="form-control" type="text" value="">
+                            <div class="input-group-addon min-width-100">EFTERNAMN</div>
+                            <input id="salesman-last-name" name="salesman.LastName" class="form-control" type="text" value="">
+                        </div>
+                    </div>
+                   <input id="salesman-ismember" type="checkbox" /> Medlem
+                   <input id="salesman-ismember-hidden" type="hidden" name="salesman.IsMember" value="false" />
+
+                </div>
+                <br />
+                <h4>LÄGG TILL VAROR</h4>
+                <hr />
+                <div class="form-group">
+                    
+                    <div class="input-group">
+                        <div class="input-group-addon min-width-100">BESKRIVNING</div>
+                        <div id="typeahead-description">
+                            <input id="item-description" class="form-control min-width-400 typeahead" type="text" value="">
+                        </div>
+                        <div class="input-group-addon">PRIS</div>
+                        <input id="item-price" class="form-control numeric-textbox" type="text" value="">
+                        <span class=" input-group-btn">
+                            <button id="add-item" class="btn btn-default" type="button"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> LÄGG TILL...</button>
+                        </span>
+                    </div>
+                    
+                </div>
+                <table id="items" class="table hidden">
+                    <thead>
+                        <tr>
+                            <th>Vara</th>
+                            <th>Pris</th>
+                            <th></th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody id="items-body"></tbody>
+
+                </table>
+                <br /><br />
+                <div id="error-message" class="hidden alert alert-danger"></div>
+                
+            </form>
+        </div>
+        
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">AVBRYT</button>
+            <button id="save" type="button" class="btn btn-primary"><span id="next-spinner" class="fa fa-circle-o-notch fa-spin hidden"></span><span id="next-text">NÄSTA >></span></button>
+            
+        </div>
+    </div>
+ </div> 
+
+
+
+<script>
+    var categories = [];
+    @{
+        foreach (ItemCategory category in Model.ItemCategories)
+        {
+            @:categories.push('@Html.Raw(category.Name)');
+        }
+    }
+
+    var phonenumbers = [];
+
+    @{
+        foreach (string phone in Model.PhoneNumbers)
+        {
+            @:phonenumbers.push('@Html.Raw(phone)');
+        }
+    }
+
+    $('#item-description').typeahead({ source: categories, showHintOnFocus: true });
+    $('#salesman-phone').typeahead({ source: phonenumbers, showHintOnFocus: true });
+
+</script>
+
+
+

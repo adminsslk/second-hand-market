@@ -1,0 +1,30 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.Models
+@model List<ItemSearchResult>
+
+@foreach (ItemSearchResult searchResult in Model)
+{ 
+    if(searchResult.Exists)
+    { 
+        <div style="margin: 20px;">
+            <h1>@searchResult.Description</h1>
+            <table id="change-log" class="table lead">
+                <tbody>
+                    @foreach (ItemChangeLog changeLog in searchResult.ChangeLogs)
+                    {
+                        <tr>
+                            <td width="100">@changeLog.TimeStamp.ToString("yyyy-MM-dd HH:mm")</td>
+                            <td width="250">@changeLog.Log</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="text-center lead">
+            <h3>Hittar inga varor med detta nummer</h3>
+        </div>
+    }
+}

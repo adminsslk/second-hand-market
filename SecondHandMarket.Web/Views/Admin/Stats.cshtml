@@ -1,0 +1,53 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+@using SecondHandMarket.Web.Models
+
+@model StatsViewModel
+
+@section Scripts
+{
+    <script src="~/js/admin/stats.js"></script>
+}
+
+<div class="container">
+    <div class="row">
+
+        <!-- Nav tabs -->
+        @Html.Partial("_Navigation")
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="stats">
+                <br /><br />
+                <div class="lead">
+                    <!-- Nav tabs -->
+                    <ul id="year-tabs" class="nav nav-tabs" role="tablist">
+                        @foreach (var stats in Model.Stats)
+                        {
+                            <li role="presentation" class="@if (Model.ActiveYear == stats.Year) {<text>active</text> }"><a href="#@stats.Year" aria-controls="@stats.Year" role="tab" data-toggle="tab">@stats.Year</a>  </li>
+                        }
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        @foreach (var stats in Model.Stats)
+                        {
+                            <div role="tabpanel" class="tab-pane @if (Model.ActiveYear == stats.Year) {<text>active</text> }" id="@stats.Year">
+                                @Html.Partial("Partials/_StatsPage", stats)
+                            </div>
+                        }
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <hr>
+        <p class="text-muted">Utvecklat av <a href="http://www.it-e.se">IT-Entreprenörerna Sverige AB</a></p>
+    </div>
+</footer>

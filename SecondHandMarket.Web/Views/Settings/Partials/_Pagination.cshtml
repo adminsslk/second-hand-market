@@ -1,0 +1,69 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Settings
+@model UsersViewModel
+
+<div class="text-center">
+    @{
+        string text = "";
+        if (Model.PageSize == 0)
+        {
+            text = "0 - " + Model.SearchCount.ToString() + " av " + Model.SearchCount.ToString();
+        }
+        else
+        {
+            if (Model.PageSize >= Model.SearchCount)
+            {
+                text = (Model.PageIndex + 1).ToString() + " - " + Model.SearchCount.ToString() + " av " + Model.SearchCount.ToString();
+            }
+            else if (Model.PageIndex + Model.PageSize >= Model.SearchCount)
+            {
+                text = (Model.PageIndex + 1).ToString() + " - " + Model.SearchCount.ToString() + " av " + Model.SearchCount.ToString();
+            }
+            else
+            {
+                text = (Model.PageIndex + 1).ToString() + " - " + (Model.PageIndex + Model.PageSize).ToString() + " av " + Model.SearchCount.ToString();
+            }
+        }
+    }
+    <p class="small">@text</p>
+        <nav>
+        <ul class="pagination">
+            @{ 
+
+                int previousIndex = Model.PageIndex - Model.PageSize;
+                if (previousIndex < 0)
+                {
+                    previousIndex = 0;
+                }
+
+
+                int nextIndex = Model.PageIndex + Model.PageSize;
+                if (nextIndex >= Model.SearchCount)
+                {
+                    nextIndex = Model.PageIndex;
+                }
+            }
+            <li>
+                <a href="#" onclick="submitForm(@previousIndex)" aria-label="Previous">
+                    <span aria-hidden="true">&laquo;</span>
+                </a>
+            </li>
+            @for (int i = 1; i <= Model.PageCount; i++)
+            {
+                var pageIndex = (i - 1) * Model.PageSize;
+                <li @if (Model.PageIndex == pageIndex) {<text>class="active"</text> } ><a href="#" onclick="submitForm(@pageIndex)">@i</a></li>
+            }
+            <li>
+                <a href="#" onclick="submitForm(@nextIndex)" aria-label="Next">
+                    <span aria-hidden="true">&raquo;</span>
+                </a>
+            </li>
+
+        </ul>
+        
+    </nav>
+    
+    <br />
+</div>
+
+

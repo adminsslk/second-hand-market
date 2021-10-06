@@ -1,0 +1,40 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+@model SalesViewModel
+
+@if(Model.AddedItems.Count > 0)
+{
+    <table id="items" class="table">
+        <thead>
+            <tr>
+                <th>Vara</th>
+                <th>Pris</th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody id="items-body">
+            @foreach (Item item in Model.AddedItems)
+            {
+                <tr>
+                    <td>@item.Id.ToString() | @item.Description</td>
+                    <td>@item.Price kr</td>
+                    <td><a href="#" onclick="removeItem(@item.Id)"><span class="fa fa-trash-o pull-right"></span></a></td>
+                </tr>
+            }
+
+        </tbody>
+        <tfoot>
+            <tr>
+                <th></th>
+                <th>@Model.TotalPrice kr</th>
+                <th></th>
+            </tr>
+        </tfoot>
+
+    </table>
+}
+
+
+
+
+

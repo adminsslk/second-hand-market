@@ -1,0 +1,57 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+@model RegisterSalesmanViewModel
+
+
+<script src="~/js/admin/_SubmissionForm.js"></script>
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h2 class="modal-title">INLÄMNING</h2>
+        </div>
+
+        <div class="modal-body">
+                <div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon">MOBILNUMMER</div>
+                            <input id="salesman-phone" class="form-control numeric-textbox" type="text" onfocus="this.select();">
+                        </div>
+                        
+                    </div>
+                </div>
+                <br />
+                <hr />
+                <div id="registerd-items">
+
+
+                </div>
+        </div>
+
+        <div class="modal-footer">
+            <button id="save-submitted" type="button" class="btn btn-primary" onclick="changeItemStatus()" disabled>REGISTRERA SOM INLÄMNADE</button>
+            <button type="button" class="btn btn-default" data-dismiss="modal">AVBRYT</button>
+        </div>
+    </div>
+</div>
+
+<script>
+    var phonenumbers = [];
+
+    @{
+        foreach (string phone in Model.PhoneNumbers)
+        {
+            @:phonenumbers.push('@Html.Raw(phone)');
+        }
+    }
+    $('#salesman-phone').typeahead({
+        source: phonenumbers,
+        showHintOnFocus: true
+    });    
+
+</script>
+
+
+

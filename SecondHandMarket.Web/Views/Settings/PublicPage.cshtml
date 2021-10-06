@@ -1,0 +1,72 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Settings
+@model PublicPageViewModel
+
+
+@section Scripts
+{
+    <script src="~/js/settings/publicpage.js"></script>
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Nav tabs -->
+        @Html.Partial("_Navigation")
+        <br />
+        @Html.Partial("_SettingsNavigation")
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active">
+                <br />
+                <!-- Nav tabs -->
+                <ul id="year-tabs" class="nav nav-tabs" role="tablist">
+                    @foreach (var year in Model.Years)
+                    {
+                        <li role="presentation" class="@if (Model.SelectedYear == year.Value) {<text>active</text> }"><a href="@Url.Action("publicpage", new { id = year.Value })">@year.Value</a>  </li>
+                    }
+                </ul>
+
+                <!-- Tab panes -->
+                <div class="tab-content">
+
+                        <div role="tabpanel" class="tab-pane active">
+                            <h3>INFORMATION</h3>
+                            <form method="post">
+                                <textarea id="frontpage-info-section-@Model.SelectedYear" class="frontpage-section" data-year="@Model.SelectedYear" data-section="info">
+                                    @if(Model.FrontPageSections.Where(fps => fps.Year.Value == Model.SelectedYear && fps.Section == "info").FirstOrDefault() != null)
+                                    {
+                                        @Model.FrontPageSections.Where(fps => fps.Year.Value == Model.SelectedYear && fps.Section == "info").FirstOrDefault().Html
+                                    }                                    
+                                </textarea>
+                            </form>
+                            <script>
+
+                            </script>
+                            <br />
+                            <h3>ÖPPETTIDER</h3>
+                            <form method="post">
+                                <textarea id="frontpage-openinghours-section-@Model.SelectedYear" class="frontpage-section" data-year="@Model.SelectedYear" data-section="openinghours">
+                                    @if (Model.FrontPageSections.Where(fps => fps.Year.Value == Model.SelectedYear && fps.Section == "openinghours").FirstOrDefault() != null)
+                                    {
+                                        @Model.FrontPageSections.Where(fps => fps.Year.Value == Model.SelectedYear && fps.Section == "openinghours").FirstOrDefault().Html
+                                    }
+                                </textarea>
+                            </form>
+
+                            <h3>INBÄDDAD KARTA</h3>
+                            <form method="post">
+                                <textarea id="frontpage-map-section-@Model.SelectedYear" class="frontpage-section" data-year="@Model.SelectedYear" data-section="map">
+                                    @if (Model.FrontPageSections.Where(fps => fps.Year.Value == Model.SelectedYear && fps.Section == "map").FirstOrDefault() != null)
+                                    {
+                                        @Model.FrontPageSections.Where(fps => fps.Year.Value == Model.SelectedYear && fps.Section == "map").FirstOrDefault().Html
+                                    }                                    
+                                </textarea>
+                            </form>
+                        </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

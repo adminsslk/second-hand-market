@@ -1,0 +1,92 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+@model ReceiptViewModel
+
+@{
+    Layout = "";
+}
+<html>
+<head>
+    @Styles.Render("~/css")
+</head>
+<body>
+    <div class="container" style="width: 210mm;">
+        <div class="row">
+            <div class="col-md-2">
+                <img src="~/img/logo1.jpg" style="width: 80px; margin-top:20px;" class="pull-left" />
+            </div>
+            <div class="col-md-8">
+                <span class="pull-right">@DateTime.Now.ToShortDateString() @DateTime.Now.ToShortTimeString()</span>
+                <h1>INLÄMNINGSKVITTO</h1>
+                <h4>SSLK BYTESMARKNAD @Model.ActiveYear</h4>
+            </div>
+        </div>
+        <div class="row">
+            <hr />
+            <div class="col-md-12"><h4>@Model.Salesman.FullName</h4></div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">@Model.Salesman.Phone</div>
+        </div>
+        <div class="row">
+            <br />
+            <div class="col-md-12">
+                <table id="items" class="table">
+                    <thead>
+                        <tr>
+                            <th>Varunummer</th>
+                            <th>Beskrivning</th>
+                            <th>Pris</th>
+                            <th>Inlämnad</th>
+                            <th>Utbetald</th>
+                            <th>Återlämnad</th>
+                          </tr>
+                    </thead>
+                    <tbody id="items-body">
+                        @foreach (Item item in Model.Items)
+                        {
+                            <tr>
+                                <td>@item.Id</td>
+                                <td>@item.Description</td>
+                                <td>@if (item.IsExchangeItem) {<text>Fyndvara</text>}else{@item.Price<text> kr</text>}</td>
+                                <td><span style="width:100px;border-bottom:dotted;"></span></td>
+                                <td><span style="width:100px;border-bottom:dotted;"></span></td>
+                                <td><span style="width:100px;border-bottom:dotted;"></span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row">
+            <div class="container">
+                <br /><br />
+                <hr />
+                <br />
+                <p class="lead text-center">
+                    Kolla dina varor på:
+                    <br />
+                    www.sundsvallsslalomklubb.se/bytesmarknad
+                </p>
+                <br />
+                <hr />
+                <br /><br />
+                <p>
+                    <small>
+                        <b><i>Försäljningsvilkor</i></b>
+                        <br />
+                        <i>
+                            Genom att lämna in artiklar på vår bytesmarknad accepterar du som säljare följande försäljningsvillkor:<br />
+                            Bytesmarknaden är helt kontantfri. Vi accepterar betalning med swish eller betalkort och återbetalning sker till ditt bankkonto (kontonummer uppges vid inlämningen).
+                            Priset per inlämnad vara är 30 kr och det betalas vid inlämningen. Provisionen för såld vara är 15% och detta dras av från priset innan pengarna för såld vara lämnas ut. Om varan inte skulle bli såld betalar du ingen provision. Varor kan lämnas in fredag-lördag (12-13 oktober). När du kommer till inlämningen är det viktigt att du har med dig de artiklar du vill lämna in, tänkt pris på alla artiklar, kontonummer för utbetalning och mobiltelefonnummer att registrera artiklarna mot
+                            Du kan själv se om din vara är såld eller inte på www.sundsvallsslalomklubb.se/bytesmarknad. Det gör du under ”Kolla mina varor”. Osålda varor hämtas senast söndagen den 14/10 kl. 15.00 på Bilbolaget – de varor som inte hämtats ut innan denna tidpunkt skänks till Sportoteket i Sundsvall.
+                            Ersättning för sålda varor betalas ut till det kontonummer som uppges vid inlämningen. Målsättningen är att utbetalning sker inom 10 bankdagar efter bytesmarknaden, dock senast den 26/10    När du har lämnat in dina varor får du ett signerat kvitto. Observera att kvittot är en värdehandling och utan det kan vi inte lämna ut eventuella osålda varor eller kontrollera utbetalning av ersättning för sålda varor. Du kan läsa mer om vår behandling av personuppgifter på www.sundsvallsslalomklubb.se/bytesmarknad.
+                        </i>
+                    </small>
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+@model ItemViewModel
+
+<tr id="tr-@Model.Item.Id.ToString()">
+    <td><a href="#" onclick="showEditItemForm('@Model.Item.Id')">@Model.Item.Id.ToString()-@Model.Item.Year.Value</a></td>
+    <td>@Model.Item.Description</td>
+    <td><a href="#" onclick="showPrintOutForm('@Model.Item.Salesman.Phone')">@Model.Item.Salesman.FullName</a></td>
+    <td class="text-center">@if (Model.Item.Salesman.IsMember) {<text>Ja</text> } else { <text>Nej</text>}</td>
+    <td>@Model.Item.Salesman.Phone</td>
+    <td>@if (Model.Item.IsExchangeItem){<text>Fyndvara</text>}else{@Model.Item.Price<text> kr</text>}</td>
+    <td>@if (Model.Item.IsExchangeItem){<text></text>}else{@Model.Item.SellersShare<text> kr</text>}
+    </td>
+    <td>
+        <div>
+            <div class="btn-group">
+                <button class="btn btn-sm @if (Model.Item.StatusId == 1){<text>btn-default</text> } else {<text>btn-primary</text> } dropdown-toggle" type="button" id="item-status-button-@Model.Item.Id" data-toggle="dropdown" title="Ändra status">
+                    @Model.Item.ItemStatus.Status
+                    &nbsp;<span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu-@Model.Item.Id">
+                    @switch (Model.Item.StatusId)
+                    {
+                        case 1:
+                            break;
+                        case 2:
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="2">Inlämnad</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="3" onclick="updateItemStatus(@Model.Item.Id, 3)">Såld</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="5">&nbsp;&nbsp;Utbetald</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="4" onclick="updateItemStatus(@Model.Item.Id, 4)">Återlämnad</a></li>
+                            break;
+                        case 3:
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="2">Inlämnad</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="3">Såld</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="5" onclick="updateItemStatus(@Model.Item.Id, 5)">&nbsp;&nbsp;Utbetald</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="4">Återlämnad</a></li>
+                            break;
+                        case 4:
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="2">Inlämnad</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="3">Såld</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="5">&nbsp;&nbsp;Utbetald</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="4">Återlämnad</a></li>
+                            break;
+                        case 5:
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="2">Inlämnad</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="3">Såld</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="5">&nbsp;&nbsp;Utbetald</a></li>
+                            <li role="presentation" class="disabled"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="4">Återlämnad</a></li>
+                            break;
+                        default:
+                            <li role="presentation"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="2" onclick="updateItemStatus(@Model.Item.Id, 2)">Inlämnad</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="3" onclick="updateItemStatus(@Model.Item.Id, 3)">Såld</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="5" onclick="updateItemStatus(@Model.Item.Id, 5)">&nbsp;&nbsp;Utbetald</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" class="update-item-status" data-item-id="@Model.Item.Id" data-item-status-id="4" onclick="updateItemStatus(@Model.Item.Id, 4)">Återlämnad</a></li>
+                            break;
+                    }
+                </ul>
+            </div>
+        </div>
+    </td>
+    <td>
+        @if (Model.GetLoggedOnUser().UserRole.Id == 2)
+        {
+            <button type="button" class="btn btn-sm btn-danger delete-item-button pull-right" title="Ta bort" data-id="@Model.Item.Id" onclick="showDeleteForm('@Model.Item.Id')">
+                <span class="fa fa-trash-o"></span>
+            </button>
+        }
+
+    </td>
+</tr>

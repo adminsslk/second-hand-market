@@ -1,0 +1,86 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Settings
+
+@model UsersViewModel
+
+@section Scripts
+{
+    <script src="~/js/settings/users.js"></script>
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Nav tabs -->
+        @Html.Partial("_Navigation")
+        <br />
+        @Html.Partial("_SettingsNavigation")
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="users">
+                <form id="search-form" method="post" action="@Url.Action("Users")">
+                    <!-- Button group -->
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10">
+                            <button type="button" class="btn btn-default" onclick="showRegisterUserForm()">
+                                <span class="fa fa-plus"></span>  LÄGG TILL...
+                            </button>
+                        </div>
+                        <div class="col-lg-2 col-md-2">
+                            <div class="input-group">
+                                <div class="input-group-addon">anv/sida</div>
+                                <select id="page-size" name="pageSize" class="form-control">
+                                    <option @if (Model.PageSize == 20) { <text> selected</text> } value="20">20</option>
+                                    <option @if (Model.PageSize == 50) { <text> selected</text> } value="50">50</option>
+                                    <option @if (Model.PageSize == 100) { <text> selected</text> } value="100">100</option>
+                                    <option @if (Model.PageSize == 200) { <text> selected</text> } value="200">200</option>
+                                    <option @if (Model.PageSize == 300) { <text> selected</text> } value="300">300</option>
+                                    <option @if (Model.PageSize == 0) { <text> selected</text> } value="0">Alla</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Search Filter -->
+                    <br />
+                    <div class="well well-lg inline">
+                        <input id="page-index" name="pageIndex" type="hidden" value="@Model.PageIndex" />
+                        <div class="input-group">
+                            <div class="input-group-addon">FÖRNAMN</div>
+                            <input id="search-item-first-name" name="firstName" class="form-control pull-left" type="text" placeholder="" value="@Model.FirstName">
+                            <div class="input-group-addon">EFTERNAMN</div>
+                            <input id="search-item-last-name" name="lastName" class="form-control pull-left" type="text" placeholder="" value="@Model.LastName">
+                            <div class="input-group-addon">MOBILNUMMER</div>
+                            <input id="search-item-phone" name="phone" class="form-control pull-left" type="text" placeholder="" value="@Model.Phone">
+                        </div>
+                        <br />
+                        <span>Antal träffar: @Model.SearchCount.ToString()</span>
+                        <button class="search-button btn btn-primary pull-right" onclick="submitForm(0)">SÖK</button>
+                    </div>
+                </form>
+                <hr />
+                <!-- Table -->
+                <table id="user-table" class="table table-hover table-condensed">
+                    <thead>
+                        <tr>
+                            <th class="">Namn</th>
+                            <th>Mobilnummer</th>
+                            <th>e-postadress</th>
+                            <th>Medlem</th>
+                            <th>Roll</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (User user in Model.Users)
+                        {
+                            @Html.Partial("Partials/_UserRow", UserViewModel.GetModel(user.Id))
+                        }
+                    </tbody>
+                </table>
+                <!--Pagination-->
+                @Html.Partial("Partials/_Pagination", Model)
+            </div>
+        </div>
+    </div>
+</div>

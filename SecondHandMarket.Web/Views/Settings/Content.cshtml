@@ -1,0 +1,86 @@
+﻿@using SecondHandMarket.Web.ViewModels.Settings
+@model ContentViewModel
+
+
+@section Scripts
+{
+    <script src="~/js/settings/content.js"></script>
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Nav tabs -->
+        @Html.Partial("_Navigation")
+        <br />
+        @Html.Partial("_SettingsNavigation")
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active">
+                <br />
+                <div class="btn-group">
+                    <form method="post" action="@Url.Action("UploadFile")" enctype="multipart/form-data">
+                        <div class="input-group">
+                            <input id="file" name="file" type="file" class="form-control" />
+                            <span class="input-group-btn">
+                                <button class="btn btn-default" type="submit">
+                                    <span class="fa fa-plus"></span>  LÄGG TILL...
+                                </button>
+                            </span>
+                        </div>
+                    </form>
+                </div>
+                <hr />
+                <!-- Table -->
+                <table id="user-table" class="table table-hover table-condensed">
+                    <thead>
+                        <tr>
+                            <th class="">Filer</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (Uri contentUri in Model.GetContentUris())
+                        {
+                            <tr>
+                                <td>
+                                    <a href="@contentUri.AbsoluteUri">@contentUri.AbsoluteUri</a>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-sm btn-danger delete-file-button pull-right" title="Ta bort" data-id="" onclick="showDeleteFileForm('@contentUri.AbsolutePath')">
+                                        <span class="fa fa-trash-o"></span>
+                                    </button>
+                                </td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div class="modal" id="delete-file-dialog" tabindex="-1" role="dialog" aria-labelledby="" aria-hidden="true" data-backdrop="static">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true" onclick="hideDeleteFileForm()">×</button>
+                <h4 class="modal-title">TA BORT FIL</h4>
+            </div>
+
+            <form method="post" action="@Url.Action("DeleteFile")">
+                <input id="file-name-hidden" value="" type="hidden" name="fileName" />
+                <div class="modal-body">
+                    Är du säker på att du vill ta bort <span id="file-name"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="submit" class="btn btn-primary">OK</button>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" onclick="hideDeleteFileForm()">AVBRYT</button>
+
+                </div>
+            </form>
+
+        </div><!-- /.modal-content -->
+    </div><!-- /.modal-dialog -->
+</div>

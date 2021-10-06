@@ -1,0 +1,29 @@
+﻿@model System.Web.Mvc.HandleErrorInfo
+
+@{
+    ViewBag.Title = "Error";
+}
+
+<div class="container">
+    <h1>Hoppsan, nu hände nått konstigt</h1>
+    <h4>@Model.Exception.GetType().ToString()</h4>
+    <p>@Model.Exception.Message</p>
+    <p>@Model.Exception.StackTrace</p>
+
+    @if (Model.Exception.InnerException != null)
+    {
+        <h4>@Model.Exception.InnerException.GetType().ToString()</h4>
+        <p>@Model.Exception.InnerException.Message</p>
+        <p>@Model.Exception.InnerException.StackTrace</p>
+
+        if (Model.Exception.InnerException.InnerException != null)
+        {
+            <h4>@Model.Exception.InnerException.InnerException.GetType().ToString()</h4>
+            <p>@Model.Exception.InnerException.InnerException.Message</p>
+            <p>@Model.Exception.InnerException.InnerException.StackTrace</p>
+        }
+    }
+</div>
+
+
+

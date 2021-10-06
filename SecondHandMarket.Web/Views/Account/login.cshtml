@@ -1,0 +1,70 @@
+﻿@{
+    Layout = "";
+}
+
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>SSLK BYTESMARKNAD</title>
+    @Styles.Render("~/css")
+    <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+    @Scripts.Render("~/modernizr")
+
+</head>
+<body>
+
+    <!-- Navigation -->
+    <a id="menu-toggle" href="#" class="btn btn-dark btn-lg toggle"><i class="fa fa-bars"></i></a>
+    <nav id="sidebar-wrapper">
+        <ul class="sidebar-nav">
+            <a id="menu-close" href="#" class="btn btn-light btn-lg pull-right toggle"><i class="fa fa-times"></i></a>
+            <li class="sidebar-page">
+                <a href="~/public/index#top">SSLK Bytesmarknad</a>
+            </li>
+            <li>
+                <a href="~/public/index#about">Öppettider</a>
+            </li>
+            <li>
+                <a href="~/public/index#items">Kolla mina varor</a>
+            </li>
+
+            <li>
+                <a href="~/account/login">Logga in...</a>
+            </li>
+        </ul>
+    </nav>
+
+    <!-- Login -->
+    <section id="top" class="header">
+        <div class="text-vertical-center">
+            <form role="form" class="login-form text-right" method="post">
+                <div class="form-group">
+                    <input type="email" class="form-control" id="email" name="email" placeholder="e-postadress">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" id="password" name="password" placeholder="Lösenord">
+                </div>
+                <button type="submit" class="btn btn-default">Logga in</button>
+            </form>
+            <br /><br />
+            <div class="text-center lead">
+                <span id="error-message" class="bg-danger">@ViewBag.Message</span>
+            </div>
+        </div>
+    </section>
+
+    <script type="text/javascript">
+            var host = '@Url.Content("~")';
+            var isTouchDevice = 'ontouchstart' in document.documentElement;
+    </script>
+
+    @Scripts.Render("~/js")
+
+</body>
+</html>

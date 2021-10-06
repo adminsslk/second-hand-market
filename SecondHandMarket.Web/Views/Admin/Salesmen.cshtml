@@ -1,0 +1,115 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+
+@model SalesmenViewModel
+
+@section Scripts
+{
+   <script src="~/js/admin/salesmen.js"></script>
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Nav tabs -->
+        @Html.Partial("_Navigation")
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="items">
+                <form id="search-form" method="post" action="@Url.Action("Salesmen")">
+                    <!-- Button group -->
+                    <br />
+                    <div class="row">
+                        <div class="col-lg-10 col-md-10">
+                        </div>
+                        <div class="col-lg-2 col-md-2">
+                            <div class="input-group">
+                                <div class="input-group-addon">säljare/sida</div>
+                                <select id="page-size" name="PageSize" class="form-control">
+                                    <option @if (Model.PageSize == 20) { <text> selected</text> } value="20">20</option>
+                                    <option @if (Model.PageSize == 50) { <text> selected</text> } value="50">50</option>
+                                    <option @if (Model.PageSize == 100) { <text> selected</text> } value="100">100</option>
+                                    <option @if (Model.PageSize == 200) { <text> selected</text> } value="200">200</option>
+                                    <option @if (Model.PageSize == 300) { <text> selected</text> } value="300">300</option>
+                                    <option @if (Model.PageSize == 0) { <text> selected</text> } value="0">Alla</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Search Filter -->
+                    <br />
+                    <div class="well well-lg inline">
+                        <input id="page-index" name="PageIndex" type="hidden" value="@Model.PageIndex" />
+                        <input id="selected-year" type="hidden" value="@Model.Year" />
+                        <div class="input-group">
+                            <div class="input-group-addon">FÖRNAMN</div>
+                            <input id="search-item-first-name" name="FirstName" class="form-control pull-left" type="text" placeholder="" value="@Model.FirstName">
+                            <div class="input-group-addon">EFTERNAMN</div>
+                            <input id="search-item-last-name" name="LastName" class="form-control pull-left" type="text" placeholder="" value="@Model.LastName">
+                            <div class="input-group-addon">MOBILNUMMER</div>
+                            <input id="search-item-phone" name="Phone" class="form-control pull-left" type="text" placeholder="" value="@Model.Phone">
+                            <div class="input-group-addon">MEDLEM</div>
+                            <select id="search-member" name="Member" class="form-control">
+                                <option value="0" @if (Model.Member == 0) { <text> selected</text>}>Alla</option>
+                                <option value="1" @if (Model.Member == 1) { <text> selected</text>}>Ja</option>
+                                <option value="2" @if (Model.Member == 2) { <text> selected</text>}>Nej</option>
+                            </select>
+                            <div class="input-group-addon">ÅR</div>
+                            <select id="search-year" name="Year" class="form-control">
+                                @foreach (Year year in Model.GetYears())
+                                {
+                                    <option value="@year.Value" @if (@year.Value == Model.Year) { <text> selected</text>}>@year.Value</option>
+                                }
+                            </select>
+                        </div>
+                        <br />
+                        <span>Antal träffar: @Model.SearchCount.ToString()</span>
+                        <button class="search-button btn btn-primary pull-right" type="submit">SÖK</button>
+                    </div>
+
+                </form>
+                <!--Alert Message-->
+                <div id="alert" class="alert alert-success alert-dismissible hidden" role="alert">
+                    <button type="button" class="close" data-dismiss="alert"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <span id="alert-message"></span>
+                </div>
+
+                <!-- Table -->
+                <table id="items-table" class="table table-hover table-condensed">
+                    <thead>
+                        <tr>
+                            <th>Säljare</th>
+                            <th>Mobilnr</th>
+                            <th>Medlem</th>
+                            <th>Inlämnade varor</th>
+                            <th>Sålda varor</th>
+                            <th>Utbetalda varor</th>
+                            <th>Kvar att utbetala</th>
+                            <th>Bank</th>
+                            <th>Konto</th>
+                            <th></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (SalesmanViewModel user in Model.Users.OrderBy(u => u.FullName))
+                        {
+                            @Html.Partial("Partials/_SalesmanRow", user)
+                        }
+                    </tbody>
+                </table>                
+                <!--Pagination-->
+                @Html.Partial("Partials/_SalesmenPagination", Model)
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- Footer -->
+<footer>
+    <div class="container text-center">
+        <hr>
+        <p class="text-muted">Utvecklat av <a href="http://www.it-e.se">IT-Entreprenörerna Sverige AB</a></p>
+   </div>
+</footer>

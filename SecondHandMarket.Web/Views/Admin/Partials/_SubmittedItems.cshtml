@@ -1,0 +1,74 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+
+@model SubmittedItemsViewModel
+
+<script>
+    function changeItemStatus() {
+        var itemCount = 0;
+        $('.item-input').each(function () {
+            var id = $(this).data('id');
+            if (this.checked) {
+                updateItemStatus(id, 4);
+                itemCount++;
+            }
+        });
+
+        if (itemCount > 0) {
+            $('#error-message').addClass('hidden');
+            $('.modal').modal('toggle');
+        }
+        else{
+            $('#error-message').removeClass('hidden');
+        }
+        
+    }
+</script>
+
+<h4>
+    @Model.Salesman.FullName.ToUpper() (@Model.Salesman.Phone)
+</h4>
+<hr />
+
+@if (Model.Items.Count == 0)
+{
+
+    <div class="lead text-center">
+        Hittar inga varor med status "Inlämnad" på detta nummer...
+    </div>
+}
+else
+{
+    <table id="items" class="table">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Varunummer</th>
+                <th>Beskrivning</th>
+                <th>Pris</th>
+                <th>Status</th>
+            </tr>
+        </thead>
+        <tbody id="registered-items-body">
+            @foreach (Item item in Model.Items)
+            {
+            <tr>
+                <td width="20">
+                    <input class="item-input" data-id="@item.Id" type="checkbox" checked />
+                </td>
+                <td>@item.Id</td>
+                <td>@item.Description</td>
+                <td>@item.Price kr</td>
+                <td id="item-status-@item.Id">@item.ItemStatus.Status</td>
+            </tr>
+            }
+        </tbody>
+    </table>
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="error-message" class="hidden alert alert-danger text-center">Du måste markera de varor du vill registera som återlämnade</div>
+}
+
+

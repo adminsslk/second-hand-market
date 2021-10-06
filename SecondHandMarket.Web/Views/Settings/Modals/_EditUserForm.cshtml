@@ -1,0 +1,204 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Settings
+@model UserViewModel
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h2 class="modal-title">@Model.User.FullName.ToUpper()</h2>
+        </div>
+        <div class="modal-body">
+            <form role="form" class="form-horizontal">
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon min-width-150">FÖRNAMN</div>
+                        <input id="user-first-name" class="form-control" type="text" value="@Model.User.FirstName">
+                        <div class="input-group-addon min-width-100">EFTERNAMN</div>
+                        <input id="user-last-name" class="form-control" type="text" value="@Model.User.LastName">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon min-width-150">MOBILTELEFON</div>
+                        <input id="user-phone" class="form-control min-width-300 numeric-textbox" type="text" value="@Model.User.Phone">
+                        <input id="user-unchanged-phone" type="hidden" value="@Model.User.Phone">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon min-width-150">E-POSTADRESS</div>
+                        <input id="user-email" class="form-control min-width-300" type="text" value="@Model.User.Email" @if (Model.GetLoggedOnUser().Id == Model.User.Id) { <text> disabled </text> }>
+
+                    </div>
+
+                </div>
+                <div class="form-group">
+                    <div class="input-group">
+                        <div class="input-group-addon min-width-150">BANK</div>
+                        <input id="user-bank" class="form-control" type="text" value="@Model.User.Bank">
+                        <div class="input-group-addon">CLEARINGNR</div>
+                        <input id="user-clearing-number" class="form-control" type="text" value="@Model.User.ClearingNumber">
+                        <div class="input-group-addon">KONTONR</div>
+                        <input id="user-account-number" class="form-control" type="text" value="@Model.User.AccountNumber">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    &nbsp;&nbsp;&nbsp;&nbsp;<input id="user-ismember" type="checkbox" @if (Model.User.IsMember) { <text> checked </text>  } /> Medlem
+                </div>
+                <input id="user-id" type="hidden" value="@Model.User.Id" />
+                <input id="user-roleid" type="hidden" value="@Model.User.RoleId" />
+            </form>
+
+            <div class="text-center lead">
+                <span id="error-message" class="bg-danger"></span>
+            </div>
+
+            <div class="modal-footer">
+                <button class="btn btn-default pull-left" onclick="changePassword(@Model.User.Id)">BYT LÖSENORD</button>
+                <button id="update-user" type="button" class="btn btn-primary">SPARA</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">AVBRYT</button>
+            </div>
+
+        </div>
+
+    </div>
+</div>
+<script>
+        function isEmail(email) {
+            @{string expresion = @"/^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/";}
+            var regex = @expresion;
+            return regex.test(email);
+            }
+
+        function checkIfEmailExists(email) {
+            result = false;
+            url = host + "settings/checkIfEmailExists?email=" + email;
+
+            $.ajax({
+                type: 'GET',
+                url: url,
+                dataType: 'json',
+                success: function (data) {
+                    result = data;
+                },
+                data: {},
+                async: false
+            });
+            return result;
+        }
+
+        function checkIfPhoneExists(phone) {
+            result = false;
+            url = host + "settings/checkIfPhoneExists?phone=" + phone;
+
+            $.ajax({
+                type: 'GET',
+                url: url,
+                dataType: 'json',
+                success: function (data) {
+                    result = data;
+                },
+                data: {},
+                async: false
+            });
+            return result;
+        }
+
+        $('#update-user').click(function () {
+            //Validate values
+            if ($("#user-first-name").val().length == 0) {
+                $('#error-message').html("Du måste ange ett förnamn");
+                $("#user-first-name").focus();
+                return;
+            }
+            if ($("#user-last-name").val().length == 0) {
+                $('#error-message').html("Du måste ange ett efternamn");
+                $("#user-last-name").focus();
+                return;
+            }
+
+            if ($("#user-phone").val().length == 0) {
+                $('#error-message').html("Du måste ange ett mobilnummer");
+                $("#user-phone").focus();
+                return;
+            }
+
+            if ($("#user-phone").val() != $("#user-unchanged-phone").val()) {
+                if (checkIfPhoneExists($("#user-phone").val())) {
+                    $('#error-message').html("Mobilnummret finns redan registrerad på en annan användare");
+                    return;
+                }
+            }
+
+            if ($("#user-roldid").val() == '2' || $("#user-roldid").val() == '3') {
+                if ($("#user-email").val().length == 0) {
+                    $('#error-message').html("Du måste ange en e-postadress");
+                    $("#user-email").focus();
+                    return;
+                }
+
+                if (isEmail($("#user-email").val()) == false) {
+                    $('#error-message').html("Du måste ange en korrekt formaterad e-postadress");
+                    $("#user-email").focus();
+                    return;
+                }
+
+                if (checkIfEmailExists($("#user-email").val())) {
+                    $('#error-message').html("Epostadressen finns redan registrerad på en annan användare");
+                    return;
+                }
+            }
+
+            $.ajax({
+                url: host + "settings/updateuser",
+                type: "POST",
+                data: JSON.stringify({
+                    id: $("#user-id").val(),
+                    firstName: $("#user-first-name").val(),
+                    lastName: $("#user-last-name").val(),
+                    email: $("#user-email").val(),
+                    phone: $("#user-phone").val(),
+                    isMember: $("#user-ismember").val(),
+                    bank: $("#user-bank").val(),
+                    clearingNumber: $("#user-clearing-number").val(),
+                    accountNumber: $("#user-account-number").val()
+                }),
+                contentType: "application/json; charset=utf-8",
+                success: function (data) {
+                    if (typeof updateUserRow !== "undefined")
+                        updateUserRow($("#user-id").val());
+                    $('#item-dialog').modal('hide');
+                },
+                cache: false,
+                async: false,
+                error: function (jqXHR) {
+                    $('#error-message').html(jqXHR.status + ' ' + jqXHR.statusText);
+                    return false;
+                }
+            });
+
+        });
+
+        $(".numeric-textbox").keydown(function (e) {
+            //Do search if enter
+            if (e.keyCode == 13) {
+                $('#insert-user').click();
+            }
+            // Allow: backspace, delete, tab, escape and .
+            if ($.inArray(e.keyCode, [46, 8, 9, 27, 110, 190]) !== -1 ||
+                // Allow: Ctrl+A
+                (e.keyCode == 65 && e.ctrlKey === true) ||
+                // Allow: home, end, left, right
+                (e.keyCode >= 35 && e.keyCode <= 39)) {
+                // let it happen, don't do anything
+                return;
+            }
+            // Ensure that it is a number and stop the keypress
+            if ((e.shiftKey || (e.keyCode < 48 || e.keyCode > 57)) && (e.keyCode < 96 || e.keyCode > 105)) {
+                e.preventDefault();
+            }
+        });
+
+</script>

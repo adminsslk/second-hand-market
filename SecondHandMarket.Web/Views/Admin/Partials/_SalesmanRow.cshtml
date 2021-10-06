@@ -1,0 +1,23 @@
+﻿@using SecondHandMarket.Web.ViewModels.Admin
+@model SalesmanViewModel
+
+<tr id="@Model.Phone" style="height:40px;">
+    <td><a href="#" onclick="showPrintOutForm('@Model.Phone')">@Model.FullName</a></td>
+    <td>@Model.Phone</td>
+    <td>@Model.Member</td>
+    <td>@Model.NumberOfRegiteredItems</td>
+    <td>@Model.NumberOfSoldItems</td>
+    <td>@Model.NumberOfPaidOutItems</td>
+    <td>@Model.AmoutToPayOut kr</td>
+    <td>@Model.Bank</td>
+    <td>@Model.BankAccount</td> 
+    <td>
+        @if (Model.AmoutToPayOut > 0)
+        {
+            <button type="button" class="btn btn-sm btn-primary pull-right" onclick="showPayOutForm('@Model.Phone')">
+                UTBETALNING
+            </button>
+        }
+
+    </td>
+</tr>

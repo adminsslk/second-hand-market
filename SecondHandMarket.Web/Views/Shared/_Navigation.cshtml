@@ -1,0 +1,22 @@
+﻿<ul id="main-tabs" class="nav nav-tabs" role="tablist">
+    <li id="checkout" class="@if (Model.SelectedTab == "checkout") { <text>active</text> }"> 
+        <a href="@Url.Action("checkout", "admin")">KASSAN</a>
+    </li>
+    <li id="items" class="@if (Model.SelectedTab == "items") { <text>active</text> }"> 
+        <a href="@Url.Action("items", "admin")">VAROR</a>
+    </li>    
+
+    @if (Model.GetLoggedOnUser().RoleId == 2)
+    {
+    <li id="salesmen" class="@if (Model.SelectedTab == "salesmen") { <text>active</text> }">
+        <a href="@Url.Action("salesmen", "admin")">SÄLJARE</a>
+    </li>
+    <li id="stats" class="@if (Model.SelectedTab == "stats") { <text>active</text> }">
+        <a href="@Url.Action("stats", "admin")">FÖRSÄLJNINGSSTATISTIK</a>
+    </li>
+    <li id="settings" class="pull-right @if (Model.SelectedTab == "settings") { <text>active</text> }">
+        <a href="@Url.Action("users", "settings")" id="stats-tab"><span class="fa fa-cog" title="Inställningar"></span></a>
+    </li>
+    }
+</ul>
+

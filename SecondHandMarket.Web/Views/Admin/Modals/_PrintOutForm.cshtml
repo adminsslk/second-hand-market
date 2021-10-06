@@ -1,0 +1,53 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+@model PrintOutViewModel
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" onclick="onClose()"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h2 class="modal-title">@Model.Salesman.Phone &nbsp; @Model.Salesman.FullName.ToUpper()</h2>
+        </div>
+        <div class="modal-body">
+            <div class="pull-right">
+                <button id="print-recipt" type="button" class="btn btn-primary" onclick="PrintReceipt('@Model.Salesman.Phone')">SKRIV UT KVITTO</button>&nbsp;&nbsp;
+                <button id="print-labels" type="button" class="btn btn-primary" onclick="PrintLabels('@Model.Salesman.Phone')">SKRIV UT ETIKETTER</button>
+                <br /><br />
+            </div>
+            <table id="items" class="table">
+                <thead>
+                <tr>
+                    <th>Varunummer</th>
+                    <th>Beskrivning</th>
+                    <th>Pris</th>
+                    <th>Status</th>
+                    <th>Antal etiketter</th>
+                    
+                </tr>
+                </thead>
+                <tbody id="items-body">
+                @foreach (Item item in Model.Items)
+                {
+                    <tr>
+                        <td>@item.Id</td>
+                        <td>@item.Description</td>
+                        <td>@item.Price kr</td>
+                        <td>@item.ItemStatus.Status</td>
+                        <td><input type="number" data-item-id="@item.Id" value="@item.NumberOfLabels" class="form-control max-width-60" min="0" onclick="updateNumberOfLabels(this)" onblur="updateNumberOfLabels(this)" /></td>
+                        
+                    </tr>
+                 }
+                </tbody>
+            </table>
+            
+            <br />
+            <br />
+            <br />
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">STÄNG</button>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/admin/_PrintOutForm.js"></script>

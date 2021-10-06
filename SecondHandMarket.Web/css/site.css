@@ -1,0 +1,102 @@
+﻿html {
+    overflow-y: scroll;
+}
+
+body.modal-open {
+    overflow: visible;
+}
+
+.indent-5px{
+    margin-left: 5px;
+}
+
+.indent-10px{
+    margin-left: 10px;
+}
+
+.indent-20px{
+    margin-left: 20px;
+}
+
+.indent-30px{
+    margin-left: 30px;
+}
+
+.min-width-100 {
+    min-width: 100px;
+}
+
+.min-width-150 {
+    min-width: 150px;
+}
+
+.min-width-200 {
+    min-width: 200px;
+}
+.min-width-300 {
+    min-width: 300px;
+}
+
+.min-width-400 {
+    min-width: 400px;
+}
+
+.min-width-500 {
+    min-width: 500px;
+}
+.max-width-60 {
+    max-width: 60px;
+}
+.max-width-100 {
+    max-width: 100px;
+}
+.max-width-200 {
+    max-width: 200px;
+}
+.max-width-300 {
+    max-width: 300px;
+}
+
+.max-width-400 {
+    max-width: 400px;
+}
+
+.max-width-500 {
+    max-width: 500px;
+}
+
+.sidebar-nav > .sidebar-page {
+    height: 55px;
+    font-size: 18px;
+    line-height: 55px;
+}
+
+.sidebar-nav > .sidebar-page a {
+    color: #999;
+}
+
+.sidebar-nav > .sidebar-page a:hover {
+    color: #fff;
+    background: none;
+}
+
+.login-form {
+    max-width: 300px;
+    margin: auto;
+    margin-top: auto;
+    background-color: white;
+    padding: 20px;
+}
+
+.item-form {
+    max-width: 450px;
+    margin: auto;
+}
+
+.modal-body {
+    margin: 10px;
+}
+
+ul.dropdown-menu > li:hover {
+    cursor:pointer;
+}

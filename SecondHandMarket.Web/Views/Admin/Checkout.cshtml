@@ -1,0 +1,50 @@
+﻿@using SecondHandMarket.Core
+@using SecondHandMarket.Web.ViewModels.Admin
+
+@model CheckoutViewModel
+
+@section Scripts
+{
+    <script src="~/js/admin/checkout.js"></script>
+}
+
+<div class="container">
+    <div class="row">
+        <!-- Nav tabs -->
+        @Html.Partial("_Navigation")
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div class="tab-pane active" id="checkout">
+                <div class="container text-center">
+                    <br /><br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-lg btn-default new-salesman-button m-20 m-h-80 p-25">
+                                <span class="fa fa-plus"></span>  INREGISTRERING
+                            </button>
+                            <button type="button" class="btn btn-lg btn-default submission-button m-20 m-h-80 p-25">
+                                <span class="fa fa-sign-in"></span>  INLÄMNING
+                            </button>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <button type="button" class="btn btn-lg btn-default sales-button m-20 m-h-80 p-25">
+                                <span class="fa fa-shopping-cart"></span>  FÖRSÄLJNING
+                            </button>
+                            <button type="button" class="btn btn-lg btn-default pay-out-button m-20 m-h-80 p-25">
+                                <span class="fa fa-money"></span>  UTBETALNING
+                            </button>
+                            <button type="button" class="btn btn-lg btn-default return-button m-20 m-h-80 p-25">
+                                <span class="fa fa-sign-out"></span>  ÅTERLÄMNING
+                            </button>
+                        </div>
+                    </div>
+                    <br /><br />
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
