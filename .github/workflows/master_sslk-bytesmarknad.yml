@@ -26,7 +26,7 @@ jobs:
         run: nuget restore
 
       - name: Publish to folder
-        run: msbuild SundsvallsSlalomklubb.sln /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
+        run: msbuild SecondHandMarket.Web/SecondHandMarket.Web.csproj /p:Configuration=Release /p:DeployOnBuild=true /p:PublishProfile=FolderProfile
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
