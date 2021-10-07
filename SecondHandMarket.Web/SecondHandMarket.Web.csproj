@@ -222,6 +222,7 @@
     <Content Include="content\bg3.jpg" />
     <Content Include="css\bootstrap.css" />
     <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\bootstrap2.css" />
     <Content Include="css\helpers.css" />
     <Content Include="css\reset.css" />
     <Content Include="css\site.css" />
@@ -268,6 +269,9 @@
     <Content Include="import\template.xlsx" />
     <Content Include="img\forsaljningsvillkor.pdf" />
     <Content Include="content\forsaljningsvillkor.pdf" />
+    <Content Include="css\bootstrap.css.map" />
+    <Content Include="css\bootstrap.min.css.map" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
     <None Include="js\admin\_references.js" />
     <Content Include="font-awesome-4.1.0\fonts\fontawesome-webfont.eot" />
     <Content Include="font-awesome-4.1.0\fonts\fontawesome-webfont.ttf" />
@@ -582,7 +586,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>11315</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:59908/bytesmarknad</IISUrl>
+          <IISUrl>http://localhost:59908</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>http://localhost:5000/bytesmarknad</CustomServerUrl>

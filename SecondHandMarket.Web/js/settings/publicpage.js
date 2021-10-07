@@ -23,7 +23,7 @@ $(document).ready(function () {
         toolbar: 'save | styleselect | bold italic | link image | code',
         menubar: false,
         height: 500,
-        content_css: host + '/css/bootstrap.css',
+        content_css: host + 'css/bootstrap.css',
         save_onsavecallback: function () { saveFrontpageSection(this); },
         language: 'sv_SE',
         relative_urls: false,
