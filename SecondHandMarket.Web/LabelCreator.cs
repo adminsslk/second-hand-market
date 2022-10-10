@@ -6,6 +6,7 @@ using System.IO;
 using PdfSharp.Pdf;
 using PdfSharp.Drawing;
 using SecondHandMarket.Database;
+using PdfSharp.Drawing.BarCodes;
 
 namespace SecondHandMarket.Web
 {
@@ -42,6 +43,20 @@ namespace SecondHandMarket.Web
 
                     string itemPrice = item.Price.ToString() + " kr";
                     gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
+
+                    //Add barcode 3of9
+                    try
+                    {
+                        Code3of9Standard bc39 = new Code3of9Standard(item.Id.ToString(), new XSize(60, 30));
+
+                        bc39.TextLocation = TextLocation.None;
+                        gfx.DrawBarCode(bc39, XBrushes.Black, new XPoint(180, 20));
+
+                    }
+                    catch (Exception e)
+                    {
+                        //
+                    }
 
                 }
 
@@ -82,6 +97,20 @@ namespace SecondHandMarket.Web
 
                 string itemPrice = item.Price.ToString() + " kr";
                 gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
+
+                //Add barcode 3of9
+                try
+                {
+                    Code3of9Standard bc39 = new Code3of9Standard(item.Id.ToString(), new XSize(60, 30));
+
+                    bc39.TextLocation = TextLocation.None;
+                    gfx.DrawBarCode(bc39, XBrushes.Black, new XPoint(180, 20));
+
+                }
+                catch (Exception e)
+                {
+                    //
+                }
 
             }
 
