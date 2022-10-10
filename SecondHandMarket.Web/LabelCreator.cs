@@ -47,10 +47,10 @@ namespace SecondHandMarket.Web
                     //Add barcode 3of9
                     try
                     {
-                        Code3of9Standard bc39 = new Code3of9Standard(item.Id.ToString(), new XSize(60, 30));
+                        Code3of9Standard bc39 = new Code3of9Standard(item.Id.ToString(), new XSize(110, 30));
 
                         bc39.TextLocation = TextLocation.None;
-                        gfx.DrawBarCode(bc39, XBrushes.Black, new XPoint(180, 20));
+                        gfx.DrawBarCode(bc39, XBrushes.Black, new XPoint(150, 20));
 
                     }
                     catch (Exception e)
@@ -101,10 +101,10 @@ namespace SecondHandMarket.Web
                 //Add barcode 3of9
                 try
                 {
-                    Code3of9Standard bc39 = new Code3of9Standard(item.Id.ToString(), new XSize(60, 30));
+                    Code3of9Standard bc39 = new Code3of9Standard(item.Id.ToString(), new XSize(110, 30));
 
                     bc39.TextLocation = TextLocation.None;
-                    gfx.DrawBarCode(bc39, XBrushes.Black, new XPoint(180, 20));
+                    gfx.DrawBarCode(bc39, XBrushes.Black, new XPoint(150, 20));
 
                 }
                 catch (Exception e)
