@@ -45,7 +45,7 @@ function loadBody() {
 
     $.ajax({
         method: 'POST',
-        url: host + '/admin/_SalesFormBody',
+        url: host + 'admin/_SalesFormBody',
         data: {
             itemIds: itemIds
         }
