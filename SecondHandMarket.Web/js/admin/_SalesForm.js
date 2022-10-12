@@ -28,6 +28,20 @@ $('#add-item').click(function () {
     }
 });
 
+$('#item').keypress(function (e) {
+    if (e.key === 'Enter') {
+        if ($('#item').val() != '') {
+            itemId = Number($('#item').val().split(" | ")[0]);
+            if (contains(itemIds, itemId) == false) {
+                itemIds.push(itemId);
+                $('#save-button').prop("disabled", false);
+            }
+
+            loadBody();
+        }
+    }
+});
+
 function removeItem(itemId) {
     for (i = 0; i < itemIds.length; i++){
         if (itemIds[i] == itemId) {

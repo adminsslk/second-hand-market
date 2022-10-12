@@ -44,6 +44,7 @@ namespace SecondHandMarket.Web
                     string itemPrice = item.Price.ToString() + " kr";
                     gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
 
+                    /*
                     //Add barcode 3of9
                     try
                     {
@@ -57,7 +58,7 @@ namespace SecondHandMarket.Web
                     {
                         //
                     }
-
+                    */
                 }
 
             }
@@ -98,6 +99,8 @@ namespace SecondHandMarket.Web
                 string itemPrice = item.Price.ToString() + " kr";
                 gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
 
+
+                /* 
                 //Add barcode 3of9
                 try
                 {
@@ -111,6 +114,7 @@ namespace SecondHandMarket.Web
                 {
                     //
                 }
+                */
 
             }
 
