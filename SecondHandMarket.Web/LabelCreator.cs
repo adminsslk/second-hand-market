@@ -7,6 +7,8 @@ using PdfSharp.Pdf;
 using PdfSharp.Drawing;
 using SecondHandMarket.Database;
 using PdfSharp.Drawing.BarCodes;
+using BarcodeLib;
+using System.Drawing;
 
 namespace SecondHandMarket.Web
 {
@@ -44,21 +46,7 @@ namespace SecondHandMarket.Web
                     string itemPrice = item.Price.ToString() + " kr";
                     gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
 
-                    /*
-                    //Add barcode 3of9
-                    try
-                    {
-                        Code3of9Standard bc39 = new Code3of9Standard(item.Id.ToString(), new XSize(100, 40));
-
-                        bc39.TextLocation = TextLocation.None;
-                        gfx.DrawBarCode(bc39, XBrushes.Black, new XPoint(160, 20));
-
-                    }
-                    catch (Exception e)
-                    {
-                        //
-                    }
-                    */
+                    CreateBarcode(item.Id, gfx);
                 }
 
             }
@@ -99,23 +87,7 @@ namespace SecondHandMarket.Web
                 string itemPrice = item.Price.ToString() + " kr";
                 gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
 
-
-                /* 
-                //Add barcode 3of9
-                try
-                {
-                    Code3of9Standard bc39 = new Code3of9Standard(item.Id.ToString(), new XSize(100, 40));
-
-                    bc39.TextLocation = TextLocation.None;
-                    gfx.DrawBarCode(bc39, XBrushes.Black, new XPoint(160, 20));
-
-                }
-                catch (Exception e)
-                {
-                    //
-                }
-                */
-
+                CreateBarcode(item.Id, gfx);
             }
 
             string filename = "etiketter-" + phone + ".pdf";
@@ -125,6 +97,29 @@ namespace SecondHandMarket.Web
             return filename;
         }
 
+
+        private void CreateBarcode(int id, XGraphics gfx)
+        {
+            try
+            {
+                string file = System.Web.HttpContext.Current.Server.MapPath("~/tmp/") + "barcode_" + id + " " + DateTimeOffset.Now.ToUnixTimeSeconds() + ".png";
+                BarcodeLib.Barcode b = new BarcodeLib.Barcode();
+                Image img = b.Encode(BarcodeLib.TYPE.CODE128, id.ToString(), Color.Black, Color.White, 290, 120);
+
+                img.Save(file, System.Drawing.Imaging.ImageFormat.Png);
+                img.Dispose();
+
+                XImage ximg = XImage.FromFile(file);
+
+                gfx.DrawImage(ximg, 150, 18, 100, 40);
+                ximg.Dispose();
+
+            }
+            catch (Exception e)
+            {
+                System.Console.WriteLine(e.Message);
+            }
+        }
 
         private byte[] FileToByteArray(string fileName)
         {

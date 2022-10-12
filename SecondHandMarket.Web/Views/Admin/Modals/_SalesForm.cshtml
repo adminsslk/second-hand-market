@@ -48,13 +48,15 @@
             @:itemDescriptions.push('@Html.Raw(item)');
         }
     }
-    $('#item').typeahead({
-        source: itemDescriptions,
-        showHintOnFocus: true
-    });
+
+    //No autocomplete here.
+    //$('#item').typeahead({
+    //    source: itemDescriptions,
+    //    showHintOnFocus: true
+    //});
+
+    setTimeout(() => $('#item').focus(), 100);
 
 </script>
-
-
 
 
