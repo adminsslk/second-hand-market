@@ -49,8 +49,9 @@
     $('#salesman-phone').typeahead({
         source: phonenumbers,
         showHintOnFocus: true
-    });    
+    });
 
+    setTimeout(() => $('#salesman-phone').focus(), 100);
 </script>
 
 
