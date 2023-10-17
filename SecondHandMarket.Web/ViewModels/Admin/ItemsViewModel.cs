@@ -136,14 +136,15 @@ namespace SecondHandMarket.Web.ViewModels.Admin
                 item.NumberOfLabels = 1;
                 ctx.Items.Add(item);
 
-                if (item.Description.ToUpper().Contains("SKIDOR"))
+                if (item.Description.ToUpper().Contains("SKIDOR") || item.Description.ToUpper().Contains("SKIDA") || item.Description.ToUpper().Contains("TWINTIP"))
                     item.NumberOfLabels = 2;
-                if (item.Description.ToUpper().Contains("PJÄXOR"))
+                if (item.Description.ToUpper().Contains("PJÄXOR") || item.Description.ToUpper().Contains("PJÄXA"))
                     item.NumberOfLabels = 2;
-                if (item.Description.ToUpper().Contains("SKOR"))
+                if (item.Description.ToUpper().Contains("SKOR") || item.Description.ToUpper().Contains("BOOTS") || item.Description.ToUpper().Contains("STÖVLAR"))
                     item.NumberOfLabels = 2;
-                if (item.Description.ToUpper().Contains("TWINTIPS"))
+                if (item.Description.ToUpper().Contains("STAVAR"))
                     item.NumberOfLabels = 2;
+
 
                 ctx.SaveChanges();
 
