@@ -15,13 +15,18 @@ $('#save-button').click(function () {
     $('.modal').modal('toggle');
 });
 
+$('#payment-button').click(function () {
+    $('#save-button').prop("disabled", false);
+    $('#payment-button').prop("disabled", true);
+});
 
 $('#add-item').click(function () {
     if ($('#item').val() != '') {
         itemId = Number($('#item').val().split(" | ")[0]);
         if (contains(itemIds, itemId) == false) {
             itemIds.push(itemId);
-            $('#save-button').prop("disabled", false);
+            //$('#save-button').prop("disabled", false);
+            $('#payment-button').prop("disabled", false);
         }
 
         loadBody();
@@ -34,7 +39,8 @@ $('#item').keypress(function (e) {
             itemId = Number($('#item').val().split(" | ")[0]);
             if (contains(itemIds, itemId) == false) {
                 itemIds.push(itemId);
-                $('#save-button').prop("disabled", false);
+                //$('#save-button').prop("disabled", false);
+                $('#payment-button').prop("disabled", false);
             }
 
             loadBody();
@@ -48,7 +54,8 @@ function removeItem(itemId) {
             itemIds.splice(i, 1);
             loadBody();
             if (itemIds.length == 0) {
-                $('#save-button').prop("disabled", true);
+                //$('#save-button').prop("disabled", true);
+                $('#payment-button').prop("disabled", false);
             }
             return;
         }
