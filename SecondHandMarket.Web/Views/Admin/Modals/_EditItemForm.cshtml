@@ -159,7 +159,7 @@
             if ($('#item-price').val() != "Fyndvara") {
                 revenueShare = 0.12;
                 $.ajax({
-                    url: host + "admin/getRevenueShare",
+                    url: host + "admin/getRevenueShare?salesmanId=@Model.Item.SalemanId",
                     type: "GET",
                     dataType: "json",
                     success: function (data) {

@@ -89,7 +89,6 @@ namespace SecondHandMarket.Web.ViewModels.Admin
         public void RegisterSalesman(User salesman, List<Item> items)
         {
             SecondHandMarketContext ctx = new SecondHandMarketContext();
-            decimal revenueShare = GetRevenueShare();
             int year = Convert.ToInt32(ctx.GlobalSettings.Find("ActiveYear").Value);
 
             salesman.Phone = salesman.Phone.Replace(" ", "");
@@ -125,6 +124,8 @@ namespace SecondHandMarket.Web.ViewModels.Admin
             }
 
             ctx.SaveChanges();
+
+            decimal revenueShare = GetRevenueShare(salesman);
 
             //INSERT ITEMS
             foreach (Item item in items) 

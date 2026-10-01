@@ -185,10 +185,12 @@ namespace SecondHandMarket.Web.Controllers
             return j;
         }
 
-        public JsonResult GetRevenueShare()
+        public JsonResult GetRevenueShare(int? salesmanId)
         {
             ItemsViewModel viewModel = new ItemsViewModel();
-            decimal revenueShare = viewModel.GetRevenueShare();
+            SecondHandMarketContext ctx = new SecondHandMarketContext();
+            User salesman = salesmanId.HasValue ? ctx.Users.Find(salesmanId.Value) : null;
+            decimal revenueShare = viewModel.GetRevenueShare(salesman);
             JsonResult j = this.Json(revenueShare, JsonRequestBehavior.AllowGet);
             return j;
         }        

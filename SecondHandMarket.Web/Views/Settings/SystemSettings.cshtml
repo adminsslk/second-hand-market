@@ -9,6 +9,7 @@
 }
 
 @{var revenueShare = Model.GetRevenueShare() * 100;}
+@{var wholesaleRevenueShare = Model.GetWholesaleRevenueShare() * 100;}
 
 <div class="container">
     <div class="row">
@@ -75,6 +76,16 @@
                                         </div>
                                     </td>
                                     <td class="text-right read">@revenueShare</td>
+                                    <td class="text-left">%</td>
+                                </tr>
+                                <tr>
+                                    <td>Säljprovision återförsäljare: </td>
+                                    <td class="text-right hidden edit">
+                                        <div class="form-group pull-right">
+                                            <input id="year-wholesale-revenue-share" style="width: 70px;" class="form-control" type="text" value="@wholesaleRevenueShare" />
+                                        </div>
+                                    </td>
+                                    <td class="text-right read">@wholesaleRevenueShare</td>
                                     <td class="text-left">%</td>
                                 </tr>
                             </tbody>
