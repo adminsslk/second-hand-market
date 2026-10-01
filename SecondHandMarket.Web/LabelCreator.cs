@@ -23,42 +23,7 @@ namespace SecondHandMarket.Web
                 return null;
             int activeYear = int.Parse(ctx.GlobalSettings.Find("ActiveYear").Value);
 
-            PdfDocument doc = new PdfDocument();
-
-            foreach (Item item in user.Items.Where(i => i.Year == activeYear))
-            {
-                for (int i = 0; i < item.NumberOfLabels; i++)
-                {
-                    PdfPage page = new PdfPage();
-                    page.Width = XUnit.FromMillimeter(90.3);
-                    page.Height = XUnit.FromMillimeter(29);
-                    doc.Pages.Add(page);
-
-                    XGraphics gfx = XGraphics.FromPdfPage(page);
-
-                    XFont font = new XFont("Verdana", 11, XFontStyle.Bold);
-                    string itemText = item.Id.ToString() + " | " + item.Description;
-                    gfx.DrawString(itemText, font, XBrushes.Black, new XRect(0, 0, page.Width, 15), XStringFormats.TopLeft);
-
-                    XPen pen = new XPen(XColor.FromName("Black"), 1);
-                    gfx.DrawLine(pen, new XPoint(0, 60), new XPoint(400, 60));
-
-                    string itemPrice = item.Price.ToString() + " kr";
-                    gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
-
-                    CreateBarcode(item.Id, gfx);
-                }
-
-            }
-
-            if (doc.PageCount == 0)
-                return null;
-
-            string filename =  "etiketter-" + phone + ".pdf";
-            string path = System.Web.HttpContext.Current.Server.MapPath("~/tmp/") + filename;
-            doc.Save(path);
-
-            return filename;
+            return SaveLabels(user.Items.Where(i => i.Year == activeYear), phone);
         }
 
         public string CreateLabelPdf(string phone, int itemId)
@@ -69,28 +34,19 @@ namespace SecondHandMarket.Web
             if (item == null)
                 return null;
 
+            return SaveLabels(new[] { item }, phone);
+        }
+
+        private string SaveLabels(IEnumerable<Item> items, string phone)
+        {
             PdfDocument doc = new PdfDocument();
+            XFont font = new XFont("Verdana", 11, XFontStyle.Bold);
+            XPen pen = new XPen(XColor.FromName("Black"), 1);
 
-            for (int i = 0; i < item.NumberOfLabels; i++)
+            foreach (Item item in items)
             {
-                PdfPage page = new PdfPage();
-                page.Width = XUnit.FromMillimeter(90.3);
-                page.Height = XUnit.FromMillimeter(29);
-                doc.Pages.Add(page);
-
-                XGraphics gfx = XGraphics.FromPdfPage(page);
-
-                XFont font = new XFont("Verdana", 11, XFontStyle.Bold);
-                string itemText = item.Id.ToString() + " | " + item.Description;
-                gfx.DrawString(itemText, font, XBrushes.Black, new XRect(0, 0, page.Width, 15), XStringFormats.TopLeft);
-
-                XPen pen = new XPen(XColor.FromName("Black"), 1);
-                gfx.DrawLine(pen, new XPoint(0, 60), new XPoint(400, 60));
-
-                string itemPrice = item.Price.ToString() + " kr";
-                gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
-
-                CreateBarcode(item.Id, gfx);
+                for (int i = 0; i < item.NumberOfLabels; i++)
+                    DrawLabel(doc, item, font, pen);
             }
 
             if (doc.PageCount == 0)
@@ -103,23 +59,51 @@ namespace SecondHandMarket.Web
             return filename;
         }
 
+        private void DrawLabel(PdfDocument doc, Item item, XFont font, XPen pen)
+        {
+            PdfPage page = new PdfPage();
+            page.Width = XUnit.FromMillimeter(90.3);
+            page.Height = XUnit.FromMillimeter(29);
+            doc.Pages.Add(page);
+
+            using (XGraphics gfx = XGraphics.FromPdfPage(page))
+            {
+                string itemText = item.Id.ToString() + " | " + item.Description;
+                gfx.DrawString(itemText, font, XBrushes.Black, new XRect(0, 0, page.Width, 15), XStringFormats.TopLeft);
+
+                gfx.DrawLine(pen, new XPoint(0, 60), new XPoint(400, 60));
+
+                string itemPrice = item.Price.ToString() + " kr";
+                gfx.DrawString(itemPrice, font, XBrushes.Black, new XRect(0, 65, page.Width, 15), XStringFormats.TopLeft);
+
+                CreateBarcode(item.Id, gfx);
+            }
+        }
+
 
         private void CreateBarcode(int id, XGraphics gfx)
         {
             try
             {
-                string file = System.Web.HttpContext.Current.Server.MapPath("~/tmp/") + "barcode_" + id + " " + DateTimeOffset.Now.ToUnixTimeSeconds() + ".png";
                 BarcodeLib.Barcode b = new BarcodeLib.Barcode();
-                Image img = b.Encode(BarcodeLib.TYPE.CODE128, id.ToString(), Color.Black, Color.White, 290, 120);
+                using (Image img = b.Encode(BarcodeLib.TYPE.CODE128, id.ToString(), Color.Black, Color.White, 290, 120))
+                using (MemoryStream stream = new MemoryStream())
+                {
+                    img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
+                    stream.Position = 0;
 
-                img.Save(file, System.Drawing.Imaging.ImageFormat.Png);
-                img.Dispose();
+                    System.Windows.Media.Imaging.BitmapImage bitmap = new System.Windows.Media.Imaging.BitmapImage();
+                    bitmap.BeginInit();
+                    bitmap.CacheOption = System.Windows.Media.Imaging.BitmapCacheOption.OnLoad;
+                    bitmap.StreamSource = stream;
+                    bitmap.EndInit();
+                    bitmap.Freeze();
 
-                XImage ximg = XImage.FromFile(file);
-
-                gfx.DrawImage(ximg, 150, 18, 100, 40);
-                ximg.Dispose();
-
+                    using (XImage ximg = XImage.FromBitmapSource(bitmap))
+                    {
+                        gfx.DrawImage(ximg, 150, 18, 100, 40);
+                    }
+                }
             }
             catch (Exception e)
             {
