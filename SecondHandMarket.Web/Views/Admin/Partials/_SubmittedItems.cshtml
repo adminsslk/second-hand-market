@@ -3,32 +3,35 @@
 
 @model SubmittedItemsViewModel
 
-<script>
-    function changeItemStatus() {
-        var itemCount = 0;
-        $('.item-input').each(function () {
-            var id = $(this).data('id');
-            if (this.checked) {
-                updateItemStatus(id, 4);
-                itemCount++;
+@if (Model.Salesman != null)
+{
+    <script>
+        function changeItemStatus() {
+            var itemCount = 0;
+            $('.item-input').each(function () {
+                var id = $(this).data('id');
+                if (this.checked) {
+                    updateItemStatus(id, 4);
+                    itemCount++;
+                }
+            });
+    
+            if (itemCount > 0) {
+                $('#error-message').addClass('hidden');
+                $('.modal').modal('toggle');
             }
-        });
-
-        if (itemCount > 0) {
-            $('#error-message').addClass('hidden');
-            $('.modal').modal('toggle');
+            else{
+                $('#error-message').removeClass('hidden');
+            }
+            
         }
-        else{
-            $('#error-message').removeClass('hidden');
-        }
-        
-    }
-</script>
-
-<h4>
-    @Model.Salesman.FullName.ToUpper() (@Model.Salesman.Phone)
-</h4>
-<hr />
+    </script>
+    
+    <h4>
+        @Model.Salesman.FullName.ToUpper() (@Model.Salesman.Phone)
+    </h4>
+    <hr />
+}
 
 @if (Model.Items.Count == 0)
 {
@@ -39,6 +42,14 @@
 }
 else
 {
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon min-width-100">VARUNUMMER</div>
+            <input id="return-item-id" class="form-control numeric-textbox" type="text" autocomplete="off" placeholder="Skanna eller skriv varunummer och tryck Enter">
+        </div>
+    </div>
+    <div id="return-item-error" class="hidden alert alert-danger text-center"></div>
+
     <table id="items" class="table">
         <thead>
             <tr>
@@ -54,7 +65,7 @@ else
             {
             <tr>
                 <td width="20">
-                    <input class="item-input" data-id="@item.Id" type="checkbox" checked />
+                    <input class="item-input" data-id="@item.Id" type="checkbox" />
                 </td>
                 <td>@item.Id</td>
                 <td>@item.Description</td>

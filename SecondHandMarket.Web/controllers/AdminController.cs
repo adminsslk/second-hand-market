@@ -56,13 +56,15 @@ namespace SecondHandMarket.Web.Controllers
         public string Label(string phone, int itemId)
         {
             LabelCreator creator = new LabelCreator();
-            return "tmp/" + creator.CreateLabelPdf(phone, itemId);
+            string filename = creator.CreateLabelPdf(phone, itemId);
+            return filename == null ? "" : "tmp/" + filename;
         }
 
         public string Labels(string phone)
         {
             LabelCreator creator = new LabelCreator();
-            return "tmp/" + creator.CreateLabelPdf(phone);
+            string filename = creator.CreateLabelPdf(phone);
+            return filename == null ? "" : "tmp/" + filename;
         }
 
         public ActionResult Receipt(string phone)

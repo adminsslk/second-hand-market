@@ -38,7 +38,7 @@
                                     <option value="4" @if (Model.Item.ItemStatus.Id == 4) { <text> selected</text>}>Återlämnad</option>
                                 </select>
                                 <div class="input-group-addon min-width-100">ANTAL ETIKETTER</div>
-                                <input id="item-numberoflabels" class="form-control max-width-60" type="number" value="@Model.Item.NumberOfLabels" min="0" data-item-id="@Model.Item.Id" onclick="updateNumberOfLabels(this)">
+                                <input id="item-numberoflabels" class="form-control max-width-60" type="number" value="@Model.Item.NumberOfLabels" min="0" data-item-id="@Model.Item.Id" onclick="updateNumberOfLabels(this)" onblur="updateNumberOfLabels(this)" oninput="$('#print-labels').prop('disabled', !(parseInt(this.value, 10) > 0))">
                             </div>
                         </div>
 
@@ -59,7 +59,7 @@
                         </div>
                         <br />
                         <div class="pull-right">
-                            <button id="print-labels" type="button" class="btn btn-primary" onclick="PrintLabel('@Model.Item.Salesman.Phone', @Model.Item.Id)">SKRIV UT ETIKETTER</button>
+                            <button id="print-labels" type="button" class="btn btn-primary" onclick="PrintLabel('@Model.Item.Salesman.Phone', @Model.Item.Id)" @if (Model.Item.NumberOfLabels == 0) { <text>disabled</text> }>SKRIV UT ETIKETTER</button>
                         </div>
                         <br />
                     </form>

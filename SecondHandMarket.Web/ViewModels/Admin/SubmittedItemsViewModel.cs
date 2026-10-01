@@ -17,6 +17,13 @@ namespace SecondHandMarket.Web.ViewModels.Admin
             SecondHandMarketContext ctx = new SecondHandMarketContext();
             viewModel.Salesman = ctx.Users.Where(u => u.Phone == phone).FirstOrDefault();
             viewModel.ActiveYear = int.Parse(ctx.GlobalSettings.Find("ActiveYear").Value);
+
+            if (viewModel.Salesman == null)
+            {
+                viewModel.Items = new List<Item>();
+                return viewModel;
+            }
+
             viewModel.Items = ctx.Items.Where(i => i.SalemanId == viewModel.Salesman.Id && i.Year == viewModel.ActiveYear && i.StatusId == 2).ToList();
             
             return viewModel;

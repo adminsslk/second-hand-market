@@ -50,7 +50,10 @@ namespace SecondHandMarket.Web
                 }
 
             }
-            
+
+            if (doc.PageCount == 0)
+                return null;
+
             string filename =  "etiketter-" + phone + ".pdf";
             string path = System.Web.HttpContext.Current.Server.MapPath("~/tmp/") + filename;
             doc.Save(path);
@@ -89,6 +92,9 @@ namespace SecondHandMarket.Web
 
                 CreateBarcode(item.Id, gfx);
             }
+
+            if (doc.PageCount == 0)
+                return null;
 
             string filename = "etiketter-" + phone + ".pdf";
             string path = System.Web.HttpContext.Current.Server.MapPath("~/tmp/") + filename;
