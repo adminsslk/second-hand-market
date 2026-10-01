@@ -52,7 +52,7 @@ else
                     <td>@item.Description</td>
                     <td id="item-status-@item.Id">@item.ItemStatus.Status</td>
                     <td class="text-right">@item.Price kr</td>
-                    <td class="text-right">@item.SellersShare kr</td>
+                    <td class="text-right">@item.SellersShare kr @item.SellersSharePercent()</td>
 
                 </tr>
             }

@@ -218,6 +218,7 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="ItemExtensions.cs" />
     <Compile Include="LabelCreator.cs" />
     <Compile Include="Models\ItemSearchResult.cs" />
     <Compile Include="Models\Salesman.cs" />
