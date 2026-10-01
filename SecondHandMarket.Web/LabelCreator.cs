@@ -81,28 +81,41 @@ namespace SecondHandMarket.Web
         }
 
 
+        // Brother QL-700 skriver ut med 300 dpi. Smalaste stapeln (modulen) är exakt 5 punkter
+        // så att alla staplar blir lika breda, oavsett hur långt varunumret är.
+        private const double BarcodeModuleWidth = 5 * 72.0 / 300;          // 1,2 pt ≈ 0,42 mm
+        private const double BarcodeQuietZone = 10 * BarcodeModuleWidth;   // vit marginal som Code 128 kräver
+        private const double PrinterMargin = 1.5 * 72 / 25.4;              // ej utskrivbar kant, 1,5 mm
+        private const double BarcodeTop = 18;
+        private const double BarcodeHeight = 40;
+
         private void CreateBarcode(int id, XGraphics gfx)
         {
             try
             {
+                string pattern;
                 BarcodeLib.Barcode b = new BarcodeLib.Barcode();
-                using (Image img = b.Encode(BarcodeLib.TYPE.CODE128, id.ToString(), Color.Black, Color.White, 290, 120))
-                using (MemoryStream stream = new MemoryStream())
+                using (Image img = b.Encode(BarcodeLib.TYPE.CODE128, id.ToString()))
                 {
-                    img.Save(stream, System.Drawing.Imaging.ImageFormat.Png);
-                    stream.Position = 0;
+                    pattern = b.EncodedValue;
+                }
 
-                    System.Windows.Media.Imaging.BitmapImage bitmap = new System.Windows.Media.Imaging.BitmapImage();
-                    bitmap.BeginInit();
-                    bitmap.CacheOption = System.Windows.Media.Imaging.BitmapCacheOption.OnLoad;
-                    bitmap.StreamSource = stream;
-                    bitmap.EndInit();
-                    bitmap.Freeze();
-
-                    using (XImage ximg = XImage.FromBitmapSource(bitmap))
+                // Högerjustera med vit marginal mot kanten, och rita varje stapel som en rektangel
+                double left = gfx.PageSize.Width - PrinterMargin - BarcodeQuietZone - pattern.Length * BarcodeModuleWidth;
+                int i = 0;
+                while (i < pattern.Length)
+                {
+                    if (pattern[i] != '1')
                     {
-                        gfx.DrawImage(ximg, 150, 18, 100, 40);
+                        i++;
+                        continue;
                     }
+
+                    int start = i;
+                    while (i < pattern.Length && pattern[i] == '1')
+                        i++;
+
+                    gfx.DrawRectangle(XBrushes.Black, left + start * BarcodeModuleWidth, BarcodeTop, (i - start) * BarcodeModuleWidth, BarcodeHeight);
                 }
             }
             catch (Exception e)
