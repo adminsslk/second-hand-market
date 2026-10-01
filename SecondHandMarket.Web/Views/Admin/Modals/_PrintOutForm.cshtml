@@ -11,7 +11,8 @@
         <div class="modal-body">
             <div class="pull-right">
                 <button id="print-recipt" type="button" class="btn btn-primary" onclick="PrintReceipt('@Model.Salesman.Phone')">SKRIV UT KVITTO</button>&nbsp;&nbsp;
-                <button id="print-labels" type="button" class="btn btn-primary" onclick="PrintLabels('@Model.Salesman.Phone')">SKRIV UT ETIKETTER</button>
+                <button id="clear-labels" type="button" class="btn btn-default" onclick="ClearNumberOfLabels()">RENSA ANTAL ETIKETTER</button>&nbsp;&nbsp;
+                <button id="print-labels" type="button" class="btn btn-primary" onclick="PrintLabels('@Model.Salesman.Phone')" @if (!Model.Items.Any(i => i.NumberOfLabels > 0)) { <text>disabled</text> }>SKRIV UT ETIKETTER</button>
                 <br /><br />
             </div>
             <table id="items" class="table">

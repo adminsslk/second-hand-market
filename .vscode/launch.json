@@ -1,0 +1,20 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debugga webbappen (IIS Express)",
+      "type": "clr",
+      "request": "launch",
+      "preLaunchTask": "build",
+      "program": "C:/Program Files/IIS Express/iisexpress.exe",
+      "args": ["/path:${workspaceFolder}\\SecondHandMarket.Web", "/port:59908"],
+      "cwd": "${workspaceFolder}/SecondHandMarket.Web",
+      "console": "internalConsole",
+      "serverReadyAction": {
+        "action": "openExternally",
+        "pattern": "Successfully registered URL \"(http://[^\"]+)\"",
+        "uriFormat": "%s"
+      }
+    }
+  ]
+}

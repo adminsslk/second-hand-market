@@ -331,3 +331,8 @@ ASALocalRun/
 
 # Local History for Visual Studio
 .localhistory/
+
+# Genererade etiketter och streckkoder (behåll sslk.pdf så att mappen finns kvar)
+SecondHandMarket.Web/tmp/*.pdf
+SecondHandMarket.Web/tmp/*.png
+!SecondHandMarket.Web/tmp/sslk.pdf
