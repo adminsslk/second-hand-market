@@ -29,6 +29,7 @@ namespace SecondHandMarket.Web
         public const int LabelMaxLength = 26;
         public const int DescriptionMaxLength = 200;
         public const int MaxQuantity = 100;
+        public const int MaxLabelsPerItem = 4;
         public const int TagMaxLength = 3;
         public const string DefaultTag = "*";
 

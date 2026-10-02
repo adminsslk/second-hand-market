@@ -40,6 +40,18 @@
                     </div>
                     <div class="form-group">
                         <div class="input-group">
+                            <div class="input-group-addon min-width-100">ETIKETTER PER VARA</div>
+                            <select id="import-labels" class="form-control">
+                                <option value="">Automatiskt (2 för skidor, pjäxor, stavar m.m.)</option>
+                                @for (int i = 1; i <= ItemImport.MaxLabelsPerItem; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
                             <div class="input-group-addon min-width-100">CSV-FIL</div>
                             <input id="import-file" name="file" class="form-control" type="file" accept=".csv" />
                             <span class="input-group-btn">
@@ -53,7 +65,7 @@
                     Filen ska vara en CSV-fil (i Excel: Spara som &rarr; CSV) med en rubrikrad med kolumnerna
                     <strong>Beskrivning</strong>, <strong>Längd</strong>, <strong>Antal</strong> och <strong>Pris</strong>.
                     Längd och Antal är frivilliga. Taggen (t.ex. *) läggs först och längden sist i beskrivningen, och beskrivningen förkortas så att
-                    allt får plats på etiketten (@ItemImport.LabelMaxLength tecken). Lämna taggen tom om varorna inte ska taggas. Priset anges i hela kronor.
+                    allt får plats på etiketten (@ItemImport.LabelMaxLength tecken). Lämna taggen tom om varorna inte ska taggas. Priset anges i hela kronor. Etiketter per vara gäller alla varor i filen, så dela gärna upp listan per varutyp (t.ex. en fil med skidor).
                     Rader med fel hoppas över. Du kan rätta dem direkt i tabellen nedan.
                 </p>
 

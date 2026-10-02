@@ -72,7 +72,8 @@ namespace SecondHandMarket.Web.ViewModels.Admin
         }
 
         //Sparar raderna som nya varor och skriver en kvittens. Kastar ImportException om något är fel.
-        public ImportResult ImportItems(int salesmanId, List<ImportRow> rows)
+        //labelsPerItem är ett fast antal etiketter för alla varor, eller null för att avgöra det av beskrivningen
+        public ImportResult ImportItems(int salesmanId, List<ImportRow> rows, int? labelsPerItem)
         {
             SecondHandMarketContext ctx = new SecondHandMarketContext();
             User wholesaler = GetWholesaler(ctx, salesmanId);
@@ -81,6 +82,9 @@ namespace SecondHandMarket.Web.ViewModels.Admin
 
             if (rows == null || rows.Count == 0)
                 throw new ImportException("Det finns inga varor att importera.");
+
+            if (labelsPerItem.HasValue && (labelsPerItem.Value < 1 || labelsPerItem.Value > ItemImport.MaxLabelsPerItem))
+                throw new ImportException("Antal etiketter per vara måste vara mellan 1 och " + ItemImport.MaxLabelsPerItem + ".");
 
             List<Item> items = new List<Item>();
             List<KeyValuePair<ImportRow, Item>> imported = new List<KeyValuePair<ImportRow, Item>>();
@@ -112,7 +116,7 @@ namespace SecondHandMarket.Web.ViewModels.Admin
             salesman.IsMember = wholesaler.IsMember;
 
             ItemsViewModel itemsViewModel = new ItemsViewModel();
-            itemsViewModel.RegisterSalesman(salesman, items);
+            itemsViewModel.RegisterSalesman(salesman, items, labelsPerItem);
 
             //Varorna har nu fått sina varunummer
             ImportResult result = new ImportResult();

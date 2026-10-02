@@ -152,11 +152,11 @@ namespace SecondHandMarket.Web.Controllers
         }
 
         [HttpPost]
-        public ActionResult ImportItems(int salesmanId, List<ImportRow> rows)
+        public ActionResult ImportItems(int salesmanId, List<ImportRow> rows, int? labelsPerItem)
         {
             try
             {
-                ImportResult result = new ImportViewModel().ImportItems(salesmanId, rows);
+                ImportResult result = new ImportViewModel().ImportItems(salesmanId, rows, labelsPerItem);
                 PrintOutViewModel viewModel = PrintOutViewModel.GetModel(result.Phone);
                 viewModel.ImportResult = result;
                 return PartialView("Modals/_PrintOutForm", viewModel);

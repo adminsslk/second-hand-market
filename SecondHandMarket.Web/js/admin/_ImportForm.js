@@ -60,6 +60,8 @@ function updateImportSummary() {
     });
 
     var text = items + ' varor från ' + rows + ' rader, totalt ' + total.toLocaleString('sv-SE') + ' kr.';
+    if ($('#import-labels').val() !== '')
+        text += ' ' + $('#import-labels').val() + ' etikett(er) per vara.';
     if (skipped > 0)
         text += ' ' + skipped + ' rader hoppas över.';
 
@@ -126,6 +128,11 @@ $('#import-preview').on('change', '.import-include', function () {
     updateImportSummary();
 });
 
+$('#import-labels').change(function () {
+    if ($('#import-table').length > 0)
+        updateImportSummary();
+});
+
 $('#import-save').click(function () {
     //PREVENT DOUBLE SAVE
     if ($('#import-save-spinner').hasClass('hidden') == false)
@@ -159,7 +166,8 @@ $('#import-save').click(function () {
         type: 'POST',
         data: JSON.stringify({
             salesmanId: $('#import-table').data('salesman-id'),
-            rows: rows
+            rows: rows,
+            labelsPerItem: $('#import-labels').val() === '' ? null : parseInt($('#import-labels').val(), 10)
         }),
         contentType: 'application/json; charset=utf-8',
         cache: false
