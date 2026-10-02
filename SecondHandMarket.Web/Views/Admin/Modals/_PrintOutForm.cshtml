@@ -20,7 +20,6 @@
             }
             <div class="pull-right">
                 <button id="print-recipt" type="button" class="btn btn-primary" onclick="PrintReceipt('@Model.Salesman.Phone')">SKRIV UT KVITTO</button>&nbsp;&nbsp;
-                <button id="clear-labels" type="button" class="btn btn-default" onclick="ClearNumberOfLabels()">RENSA ANTAL ETIKETTER</button>&nbsp;&nbsp;
                 <button id="print-labels" type="button" class="btn btn-primary" onclick="PrintLabels('@Model.Salesman.Phone')" @if (!Model.Items.Any(i => i.NumberOfLabels > 0)) { <text>disabled</text> }>SKRIV UT ETIKETTER</button>
                 <br /><br />
             </div>
@@ -31,7 +30,12 @@
                     <th>Beskrivning</th>
                     <th>Pris</th>
                     <th>Status</th>
-                    <th>Antal etiketter</th>
+                    <th>
+                        Antal etiketter
+                        <button id="clear-labels" type="button" class="btn btn-link btn-xs" onclick="ClearNumberOfLabels()" title="Rensa antal etiketter (sätt 0 på alla varor)">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span><span class="sr-only">Rensa antal etiketter</span>
+                        </button>
+                    </th>
                     
                 </tr>
                 </thead>
