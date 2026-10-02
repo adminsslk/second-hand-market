@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SecondHandMarket.Database;
-using Excel;
 using System.Text.RegularExpressions;
 using SecondHandMarket.Web.ViewModels.Admin;
 using Newtonsoft.Json;
@@ -136,6 +135,38 @@ namespace SecondHandMarket.Web.Controllers
             ItemsViewModel viewModel = new ItemsViewModel();
             viewModel.RegisterSalesman(salesman, items);
             return PartialView("Modals/_PrintOutForm",  PrintOutViewModel.GetModel(salesman.Phone));
+        }
+
+        public ActionResult _ImportForm()
+        {
+            return PartialView("Modals/_ImportForm", ImportViewModel.CreateViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult _ImportPreview(int salesmanId, string tag, HttpPostedFileBase file)
+        {
+            ImportViewModel viewModel = file == null
+                ? ImportViewModel.CreatePreview(salesmanId, tag, null, null)
+                : ImportViewModel.CreatePreview(salesmanId, tag, file.InputStream, file.FileName);
+            return PartialView("Partials/_ImportPreview", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult ImportItems(int salesmanId, List<ImportRow> rows)
+        {
+            try
+            {
+                ImportResult result = new ImportViewModel().ImportItems(salesmanId, rows);
+                PrintOutViewModel viewModel = PrintOutViewModel.GetModel(result.Phone);
+                viewModel.ImportResult = result;
+                return PartialView("Modals/_PrintOutForm", viewModel);
+            }
+            catch (ImportException e)
+            {
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                Response.TrySkipIisCustomErrors = true;
+                return Content(e.Message);
+            }
         }
 
         public ActionResult _EditItemForm(int id)

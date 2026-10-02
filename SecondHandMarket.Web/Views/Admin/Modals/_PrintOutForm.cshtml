@@ -9,6 +9,15 @@
             <h2 class="modal-title">@Model.Salesman.Phone &nbsp; @Model.Salesman.FullName.ToUpper()</h2>
         </div>
         <div class="modal-body">
+            @if (Model.ImportResult != null)
+            {
+                <div class="alert alert-success">
+                    <a class="btn btn-default pull-right" href="@Url.Content("~/tmp/" + Model.ImportResult.ReceiptFile)" download="@Model.ImportResult.ReceiptFile"><span class="fa fa-download"></span> LADDA NER KVITTENS</a>
+                    <strong>@Model.ImportResult.ItemCount varor importerades.</strong><br />
+                    Kvittensen listar varunummer, beskrivning, pris och säljarens andel för varje importerad vara.
+                    <div class="clearfix"></div>
+                </div>
+            }
             <div class="pull-right">
                 <button id="print-recipt" type="button" class="btn btn-primary" onclick="PrintReceipt('@Model.Salesman.Phone')">SKRIV UT KVITTO</button>&nbsp;&nbsp;
                 <button id="clear-labels" type="button" class="btn btn-default" onclick="ClearNumberOfLabels()">RENSA ANTAL ETIKETTER</button>&nbsp;&nbsp;

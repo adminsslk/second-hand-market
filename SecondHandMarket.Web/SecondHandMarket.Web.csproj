@@ -51,9 +51,6 @@
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
-    <Reference Include="Excel">
-      <HintPath>ref\Excel.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
@@ -219,6 +216,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="ItemExtensions.cs" />
+    <Compile Include="ItemImport.cs" />
     <Compile Include="LabelCreator.cs" />
     <Compile Include="Models\ItemSearchResult.cs" />
     <Compile Include="Models\Salesman.cs" />
@@ -236,6 +234,7 @@
     <Compile Include="ViewModels\Admin\PayOutViewModel.cs" />
     <Compile Include="ViewModels\Admin\SalesViewModel.cs" />
     <Compile Include="ViewModels\Admin\CheckoutViewModel.cs" />
+    <Compile Include="ViewModels\Admin\ImportViewModel.cs" />
     <Compile Include="ViewModels\Admin\ItemViewModel.cs" />
     <Compile Include="ViewModels\Admin\ItemsViewModel.cs" />
     <Compile Include="ViewModels\Admin\PrintOutViewModel.cs" />
@@ -291,6 +290,7 @@
     <Content Include="js\admin\_SubmissionForm.js" />
     <Content Include="js\admin\_RegisterSalesman.js" />
     <Content Include="js\admin\_PrintOutForm.js" />
+    <Content Include="js\admin\_ImportForm.js" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\bootstrap3-typeahead.js" />
@@ -537,6 +537,8 @@
     <Content Include="Views\Admin\Stats.cshtml" />
     <Content Include="Views\Admin\Settings.cshtml" />
     <Content Include="Views\Admin\Modals\_PrintOutForm.cshtml" />
+    <Content Include="Views\Admin\Modals\_ImportForm.cshtml" />
+    <Content Include="Views\Admin\Partials\_ImportPreview.cshtml" />
     <Content Include="Views\Admin\Receipt.cshtml" />
     <Content Include="Views\Admin\Partials\_ItemsPagination.cshtml" />
     <Content Include="Views\Admin\Partials\_StatsPage.cshtml" />

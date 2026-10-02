@@ -14,6 +14,9 @@ namespace SecondHandMarket.Web.ViewModels.Admin
 
         public bool ShowPrintReceiptButton { get; set; }
 
+        //Sätts efter en import
+        public ImportResult ImportResult { get; set; }
+
         public static PrintOutViewModel GetModel(string phone)
         {
             PrintOutViewModel viewModel = new PrintOutViewModel();

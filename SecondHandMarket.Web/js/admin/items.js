@@ -86,6 +86,17 @@ function showDeleteForm(id) {
     });
 }
 
+function showImportForm() {
+    $.ajax({
+        url: host + "admin/_ImportForm",
+        cache: false,
+        async: true
+    }).done(function (html) {
+        $('#item-dialog').html(html);
+        $('#item-dialog').modal('show');
+    });
+}
+
 function showPrintOutForm(phone) {
     var url = host + "admin/_PrintOutForm?phone=" + phone;
     url = encodeURI(url);
