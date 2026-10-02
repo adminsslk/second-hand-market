@@ -71,10 +71,12 @@ namespace SecondHandMarket.Web.ViewModels
             ctx.SaveChanges();
         }
 
-        //Återförsäljare (roll 5) har en egen provision
+        //Återförsäljare har en egen provision, och för klubbens egen försäljning går allt till klubben
         public decimal GetRevenueShare(User salesman)
         {
-            if (salesman != null && salesman.RoleId == 5)
+            if (salesman != null && salesman.RoleId == SalesmanRoles.ClubWholesale)
+                return 1;
+            if (salesman != null && salesman.RoleId == SalesmanRoles.Wholesale)
                 return GetWholesaleRevenueShare();
             return GetRevenueShare();
         }

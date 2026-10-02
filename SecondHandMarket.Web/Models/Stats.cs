@@ -38,15 +38,15 @@ namespace SecondHandMarket.Web.Models
             int? cash = Convert.ToInt32(soldAmount) - Convert.ToInt32(repayedAmount);
             this[6] = cash.Value.ToString("#,##0") + " kr";
             int? notRepayedAmount = items.Where(i => i.StatusId == 3).Sum(i => i.SellersShare);
-            int? notRepayedAmount2 = items.Where(i => i.StatusId == 3 && i.Salesman.RoleId != 5).Sum(i => i.SellersShare);
+            int? notRepayedAmount2 = items.Where(i => i.StatusId == 3 && !SalesmanRoles.IsWholesale(i.Salesman)).Sum(i => i.SellersShare);
 
             //COUNT
             int? stockCount = items.Count();
             int? soldCount = items.Where(i => i.StatusId == 3 || i.StatusId == 5).Count();
             int? repayedCount = items.Where(i => i.StatusId == 5).Count();
-            int? adjustedStockCount = items.Where(i => i.Salesman.RoleId != 5).Count();
+            int? adjustedStockCount = items.Where(i => !SalesmanRoles.IsWholesale(i.Salesman)).Count();
             int? notRepayedCount = soldCount - repayedCount;
-            int? notRepayedCount2 = items.Where(i => i.StatusId == 3 && i.Salesman.RoleId != 5).Count();
+            int? notRepayedCount2 = items.Where(i => i.StatusId == 3 && !SalesmanRoles.IsWholesale(i.Salesman)).Count();
             this[7] = stockCount.Value.ToString("#,##0");
             this[8] = soldCount.Value.ToString("#,##0");
             this[9] = repayedCount.Value.ToString("#,##0");

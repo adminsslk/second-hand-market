@@ -17,8 +17,6 @@ namespace SecondHandMarket.Web.ViewModels.Admin
 
     public class ImportViewModel : ViewModel
     {
-        public const int WholesaleRoleId = 5;
-
         public List<User> Wholesalers { get; set; }
 
         //Förhandsgranskning
@@ -32,7 +30,7 @@ namespace SecondHandMarket.Web.ViewModels.Admin
             ImportViewModel viewModel = new ImportViewModel();
             SecondHandMarketContext ctx = new SecondHandMarketContext();
             viewModel.Wholesalers = ctx.Users
-                .Where(u => u.RoleId == WholesaleRoleId && u.Phone != null && u.Phone != "")
+                .Where(u => (u.RoleId == SalesmanRoles.Wholesale || u.RoleId == SalesmanRoles.ClubWholesale) && u.Phone != null && u.Phone != "")
                 .OrderBy(u => u.FirstName).ThenBy(u => u.LastName)
                 .ToList();
             return viewModel;
@@ -161,7 +159,7 @@ namespace SecondHandMarket.Web.ViewModels.Admin
         private static User GetWholesaler(SecondHandMarketContext ctx, int salesmanId)
         {
             User user = ctx.Users.Find(salesmanId);
-            if (user == null || user.RoleId != WholesaleRoleId || string.IsNullOrEmpty(user.Phone))
+            if (!SalesmanRoles.IsWholesale(user) || string.IsNullOrEmpty(user.Phone))
                 return null;
             return user;
         }

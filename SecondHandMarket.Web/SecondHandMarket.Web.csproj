@@ -223,6 +223,7 @@
     <Compile Include="Models\Stats.cs" />
     <Compile Include="Models\Year.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SalesmanRoles.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="ViewModels\Admin\SalesmanViewModel.cs" />
