@@ -7,7 +7,9 @@ function PrintLabels(phone) {
         url: url,
         cache: false
     }).done(function (file) {
-        printPdf(host + file);
+        if (file) {
+            printPdf(host + file);
+        }
     });
 }
 

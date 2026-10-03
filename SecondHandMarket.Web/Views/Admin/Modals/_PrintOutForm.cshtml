@@ -9,9 +9,18 @@
             <h2 class="modal-title">@Model.Salesman.Phone &nbsp; @Model.Salesman.FullName.ToUpper()</h2>
         </div>
         <div class="modal-body">
+            @if (Model.ImportResult != null)
+            {
+                <div class="alert alert-success">
+                    <a class="btn btn-default pull-right" href="@Url.Content("~/tmp/" + Model.ImportResult.ReceiptFile)" download="@Model.ImportResult.ReceiptFile"><span class="fa fa-download"></span> LADDA NER KVITTENS</a>
+                    <strong>@Model.ImportResult.ItemCount varor importerades.</strong><br />
+                    Kvittensen listar varunummer, beskrivning, pris och säljarens andel för varje importerad vara.
+                    <div class="clearfix"></div>
+                </div>
+            }
             <div class="pull-right">
                 <button id="print-recipt" type="button" class="btn btn-primary" onclick="PrintReceipt('@Model.Salesman.Phone')">SKRIV UT KVITTO</button>&nbsp;&nbsp;
-                <button id="print-labels" type="button" class="btn btn-primary" onclick="PrintLabels('@Model.Salesman.Phone')">SKRIV UT ETIKETTER</button>
+                <button id="print-labels" type="button" class="btn btn-primary" onclick="PrintLabels('@Model.Salesman.Phone')" @if (!Model.Items.Any(i => i.NumberOfLabels > 0)) { <text>disabled</text> }>SKRIV UT ETIKETTER</button>
                 <br /><br />
             </div>
             <table id="items" class="table">
@@ -21,7 +30,12 @@
                     <th>Beskrivning</th>
                     <th>Pris</th>
                     <th>Status</th>
-                    <th>Antal etiketter</th>
+                    <th>
+                        Antal etiketter
+                        <button id="clear-labels" type="button" class="btn btn-link btn-xs" onclick="ClearNumberOfLabels()" title="Rensa antal etiketter (sätt 0 på alla varor)">
+                            <span class="glyphicon glyphicon-trash" aria-hidden="true"></span><span class="sr-only">Rensa antal etiketter</span>
+                        </button>
+                    </th>
                     
                 </tr>
                 </thead>

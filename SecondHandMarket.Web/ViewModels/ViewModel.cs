@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Text.RegularExpressions;
+using System.Globalization;
 using SecondHandMarket.Database;
 
 namespace SecondHandMarket.Web.ViewModels
@@ -39,6 +40,45 @@ namespace SecondHandMarket.Web.ViewModels
                 year = Convert.ToInt32(setting);
 
             return Convert.ToDecimal(ctx.Years.Find(year).RevenueShare);
+        }
+
+        public const string WholesaleRevenueShareKey = "WholesaleRevenueShare";
+        public const decimal DefaultWholesaleRevenueShare = 0.20m;
+
+        //Lagras i GlobalSettings (gäller alla år) för att slippa schemaändring
+        public decimal GetWholesaleRevenueShare()
+        {
+            SecondHandMarketContext ctx = new SecondHandMarketContext();
+            GlobalSetting setting = ctx.GlobalSettings.Find(WholesaleRevenueShareKey);
+
+            decimal revenueShare;
+            if (setting != null && decimal.TryParse(setting.Value, NumberStyles.Number, CultureInfo.InvariantCulture, out revenueShare))
+                return revenueShare;
+            return DefaultWholesaleRevenueShare;
+        }
+
+        public void SetWholesaleRevenueShare(decimal revenueShare)
+        {
+            SecondHandMarketContext ctx = new SecondHandMarketContext();
+            GlobalSetting setting = ctx.GlobalSettings.Find(WholesaleRevenueShareKey);
+            if (setting == null)
+            {
+                setting = new GlobalSetting();
+                setting.Key = WholesaleRevenueShareKey;
+                ctx.GlobalSettings.Add(setting);
+            }
+            setting.Value = revenueShare.ToString(CultureInfo.InvariantCulture);
+            ctx.SaveChanges();
+        }
+
+        //Återförsäljare har en egen provision, och för klubbens egen försäljning går allt till klubben
+        public decimal GetRevenueShare(User salesman)
+        {
+            if (salesman != null && salesman.RoleId == SalesmanRoles.ClubWholesale)
+                return 1;
+            if (salesman != null && salesman.RoleId == SalesmanRoles.Wholesale)
+                return GetWholesaleRevenueShare();
+            return GetRevenueShare();
         }
 
         public decimal GetSalesCost()

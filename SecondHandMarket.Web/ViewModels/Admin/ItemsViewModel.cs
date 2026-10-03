@@ -86,10 +86,10 @@ namespace SecondHandMarket.Web.ViewModels.Admin
             
             return viewModel;
         }
-        public void RegisterSalesman(User salesman, List<Item> items)
+        //numberOfLabels anger ett fast antal etiketter per vara, annars avgörs det av beskrivningen
+        public void RegisterSalesman(User salesman, List<Item> items, int? numberOfLabels = null)
         {
             SecondHandMarketContext ctx = new SecondHandMarketContext();
-            decimal revenueShare = GetRevenueShare();
             int year = Convert.ToInt32(ctx.GlobalSettings.Find("ActiveYear").Value);
 
             salesman.Phone = salesman.Phone.Replace(" ", "");
@@ -126,6 +126,8 @@ namespace SecondHandMarket.Web.ViewModels.Admin
 
             ctx.SaveChanges();
 
+            decimal revenueShare = GetRevenueShare(salesman);
+
             //INSERT ITEMS
             foreach (Item item in items) 
             {
@@ -144,6 +146,9 @@ namespace SecondHandMarket.Web.ViewModels.Admin
                     item.NumberOfLabels = 2;
                 if (item.Description.ToUpper().Contains("STAVAR"))
                     item.NumberOfLabels = 2;
+
+                if (numberOfLabels.HasValue)
+                    item.NumberOfLabels = numberOfLabels.Value;
 
 
                 ctx.SaveChanges();

@@ -22,6 +22,7 @@ namespace SecondHandMarket.Web
             user.ClearingNumber = clearingNumber;
             user.AccountNumber = accountNumber;
             user.RoleId = roleId;
+            SalesmanRoles.EnsureRoleExists(ctx, roleId);
             ctx.Users.Add(user);
             ctx.SaveChanges();
         }
@@ -101,6 +102,7 @@ namespace SecondHandMarket.Web
             User user = ctx.Users.Find(id);
             if (user != null)
             {
+                SalesmanRoles.EnsureRoleExists(ctx, roleId);
                 user.RoleId = roleId;
                 ctx.SaveChanges();
             }

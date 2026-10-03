@@ -8,6 +8,7 @@ namespace SecondHandMarket.Web.Models
     public class Year
     {
         public double RevenueShare { get; set; }
+        public double WholesaleRevenueShare { get; set; }
         public double SalesCost { get; set; }
         public int Value { get; set; }
     }

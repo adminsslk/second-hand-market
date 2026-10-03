@@ -5,7 +5,6 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using SecondHandMarket.Database;
-using Excel;
 using System.Text.RegularExpressions;
 using SecondHandMarket.Web.ViewModels.Admin;
 using Newtonsoft.Json;
@@ -56,13 +55,15 @@ namespace SecondHandMarket.Web.Controllers
         public string Label(string phone, int itemId)
         {
             LabelCreator creator = new LabelCreator();
-            return "tmp/" + creator.CreateLabelPdf(phone, itemId);
+            string filename = creator.CreateLabelPdf(phone, itemId);
+            return filename == null ? "" : "tmp/" + filename;
         }
 
         public string Labels(string phone)
         {
             LabelCreator creator = new LabelCreator();
-            return "tmp/" + creator.CreateLabelPdf(phone);
+            string filename = creator.CreateLabelPdf(phone);
+            return filename == null ? "" : "tmp/" + filename;
         }
 
         public ActionResult Receipt(string phone)
@@ -136,6 +137,38 @@ namespace SecondHandMarket.Web.Controllers
             return PartialView("Modals/_PrintOutForm",  PrintOutViewModel.GetModel(salesman.Phone));
         }
 
+        public ActionResult _ImportForm()
+        {
+            return PartialView("Modals/_ImportForm", ImportViewModel.CreateViewModel());
+        }
+
+        [HttpPost]
+        public ActionResult _ImportPreview(int salesmanId, string tag, HttpPostedFileBase file)
+        {
+            ImportViewModel viewModel = file == null
+                ? ImportViewModel.CreatePreview(salesmanId, tag, null, null)
+                : ImportViewModel.CreatePreview(salesmanId, tag, file.InputStream, file.FileName);
+            return PartialView("Partials/_ImportPreview", viewModel);
+        }
+
+        [HttpPost]
+        public ActionResult ImportItems(int salesmanId, List<ImportRow> rows, int? labelsPerItem)
+        {
+            try
+            {
+                ImportResult result = new ImportViewModel().ImportItems(salesmanId, rows, labelsPerItem);
+                PrintOutViewModel viewModel = PrintOutViewModel.GetModel(result.Phone);
+                viewModel.ImportResult = result;
+                return PartialView("Modals/_PrintOutForm", viewModel);
+            }
+            catch (ImportException e)
+            {
+                Response.StatusCode = (int)HttpStatusCode.BadRequest;
+                Response.TrySkipIisCustomErrors = true;
+                return Content(e.Message);
+            }
+        }
+
         public ActionResult _EditItemForm(int id)
         {
             return PartialView("Modals/_EditItemForm", ItemViewModel.GetModel(id));
@@ -183,10 +216,12 @@ namespace SecondHandMarket.Web.Controllers
             return j;
         }
 
-        public JsonResult GetRevenueShare()
+        public JsonResult GetRevenueShare(int? salesmanId)
         {
             ItemsViewModel viewModel = new ItemsViewModel();
-            decimal revenueShare = viewModel.GetRevenueShare();
+            SecondHandMarketContext ctx = new SecondHandMarketContext();
+            User salesman = salesmanId.HasValue ? ctx.Users.Find(salesmanId.Value) : null;
+            decimal revenueShare = viewModel.GetRevenueShare(salesman);
             JsonResult j = this.Json(revenueShare, JsonRequestBehavior.AllowGet);
             return j;
         }        

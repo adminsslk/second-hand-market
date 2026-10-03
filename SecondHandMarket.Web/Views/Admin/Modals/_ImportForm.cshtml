@@ -1,0 +1,84 @@
+﻿@using SecondHandMarket.Database
+@using SecondHandMarket.Web
+@using SecondHandMarket.Web.ViewModels.Admin
+@model ImportViewModel
+
+<div class="modal-dialog modal-lg">
+    <div class="modal-content">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            <h2 class="modal-title">IMPORTERA VAROR</h2>
+        </div>
+
+        <div class="modal-body">
+            @if (Model.Wholesalers.Count == 0)
+            {
+                <div class="alert alert-warning">
+                    Det finns ingen återförsäljare med mobilnummer. Lägg upp en användare med rollen Återförsäljare under Inställningar &rarr; Användare.
+                </div>
+            }
+            else
+            {
+                <form id="import-form" role="form" class="form-horizontal" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon min-width-100">ÅTERFÖRSÄLJARE</div>
+                            <select id="import-salesman-id" name="salesmanId" class="form-control">
+                                <option value="">Välj återförsäljare...</option>
+                                @foreach (User user in Model.Wholesalers)
+                                {
+                                    <option value="@user.Id">@user.FullName (@user.Phone)</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon min-width-100">TAGG</div>
+                            <input id="import-tag" name="tag" class="form-control max-width-60" type="text" value="@ItemImport.DefaultTag" maxlength="@ItemImport.TagMaxLength" autocomplete="off" />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon min-width-100">ETIKETTER PER VARA</div>
+                            <select id="import-labels" class="form-control">
+                                <option value="">Automatiskt (2 för skidor, pjäxor, stavar m.m.)</option>
+                                @for (int i = 1; i <= ItemImport.MaxLabelsPerItem; i++)
+                                {
+                                    <option value="@i">@i</option>
+                                }
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="input-group">
+                            <div class="input-group-addon min-width-100">CSV-FIL</div>
+                            <input id="import-file" name="file" class="form-control" type="file" accept=".csv" />
+                            <span class="input-group-btn">
+                                <button id="import-read" class="btn btn-default" type="button"><span id="import-read-spinner" class="fa fa-circle-o-notch fa-spin hidden"></span> LÄS IN FILEN</button>
+                            </span>
+                        </div>
+                    </div>
+                </form>
+
+                <p class="text-muted small">
+                    Filen ska vara en CSV-fil (i Excel: Spara som &rarr; CSV) med en rubrikrad med kolumnerna
+                    <strong>Beskrivning</strong>, <strong>Längd</strong>, <strong>Antal</strong> och <strong>Pris</strong>.
+                    Längd och Antal är frivilliga. Taggen (t.ex. *) läggs först och längden sist i beskrivningen, och beskrivningen förkortas så att
+                    allt får plats på etiketten (@ItemImport.LabelMaxLength tecken). Lämna taggen tom om varorna inte ska taggas. Priset anges i hela kronor. Etiketter per vara gäller alla varor i filen, så dela gärna upp listan per varutyp (t.ex. en fil med skidor).
+                    Rader med fel hoppas över. Du kan rätta dem direkt i tabellen nedan.
+                </p>
+
+                <div id="import-preview"></div>
+                <div id="import-error" class="hidden alert alert-danger"></div>
+            }
+        </div>
+
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">AVBRYT</button>
+            <button id="import-save" type="button" class="btn btn-primary" disabled><span id="import-save-spinner" class="fa fa-circle-o-notch fa-spin hidden"></span> <span id="import-save-text">IMPORTERA</span></button>
+        </div>
+    </div>
+</div>
+
+<script src="~/js/admin/_ImportForm.js"></script>

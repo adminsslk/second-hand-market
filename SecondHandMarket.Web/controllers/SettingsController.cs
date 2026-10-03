@@ -195,6 +195,8 @@ namespace SecondHandMarket.Web.Controllers
             gs.Value = newYear.Value.ToString();
 
             ctx.SaveChanges();
+
+            new SystemSettingsViewModel().SetWholesaleRevenueShare(Convert.ToDecimal(newYear.WholesaleRevenueShare));
         }
 
         public JsonResult GetYear(int key)
@@ -208,6 +210,7 @@ namespace SecondHandMarket.Web.Controllers
                 jsonYear = new Models.Year();
                 jsonYear.Value = year.Value;
                 jsonYear.RevenueShare = year.RevenueShare.Value;
+                jsonYear.WholesaleRevenueShare = Convert.ToDouble(new SystemSettingsViewModel().GetWholesaleRevenueShare());
                 jsonYear.SalesCost = year.SalesCost.Value;
             }
 

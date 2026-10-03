@@ -1,0 +1,54 @@
+﻿@using SecondHandMarket.Web
+@using SecondHandMarket.Web.ViewModels.Admin
+@model ImportViewModel
+
+@if (Model.ErrorMessage != null)
+{
+    <div class="alert alert-danger">@Model.ErrorMessage</div>
+}
+else
+{
+    <hr />
+    if (Model.ExistingItemCount > 0)
+    {
+        <div class="alert alert-warning">
+            <strong>@Model.Salesman.FullName</strong> har redan @Model.ExistingItemCount varor registrerade för @Model.ActiveYear.
+            Kontrollera att listan inte redan är importerad.
+        </div>
+    }
+
+    <p id="import-summary"></p>
+
+    <table id="import-table" class="table table-condensed" data-salesman-id="@Model.Salesman.Id"
+           data-label-max-length="@ItemImport.LabelMaxLength" data-description-max-length="@ItemImport.DescriptionMaxLength" data-max-quantity="@ItemImport.MaxQuantity">
+        <thead>
+            <tr>
+                <th></th>
+                <th>Rad</th>
+                <th>Beskrivning</th>
+                <th>Pris</th>
+                <th>Antal</th>
+                <th>Kontroll</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (ImportRow row in Model.Rows)
+            {
+                <tr class="import-row" data-row-number="@row.RowNumber">
+                    <td><input class="import-include" type="checkbox" checked /></td>
+                    <td class="text-muted">@row.RowNumber</td>
+                    <td>
+                        <input class="import-description form-control input-sm" type="text" value="@row.Description" />
+                        @if (row.Description != row.FullDescription)
+                        {
+                            <div class="small text-muted">Förkortad från: @row.FullDescription</div>
+                        }
+                    </td>
+                    <td><input class="import-price form-control input-sm max-width-60" type="text" value="@row.Price" /></td>
+                    <td><input class="import-quantity form-control input-sm max-width-60" type="text" value="@row.Quantity" /></td>
+                    <td class="import-status small"></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

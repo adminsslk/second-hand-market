@@ -15,7 +15,7 @@
     return result;
 }
 
-function updateActiveYear(year, salesCost, revenueShare) {
+function updateActiveYear(year, salesCost, revenueShare, wholesaleRevenueShare) {
 
     $.ajax({
         url: host + "settings/UpdateActiveYear",
@@ -23,7 +23,8 @@ function updateActiveYear(year, salesCost, revenueShare) {
         data: JSON.stringify({
             Value: year,
             SalesCost: salesCost,
-            RevenueShare: revenueShare
+            RevenueShare: revenueShare,
+            WholesaleRevenueShare: wholesaleRevenueShare
         }),
         contentType: "application/json; charset=utf-8",
         cache: false,
@@ -48,6 +49,7 @@ $(document).ready(function () {
         var year = getYear(e.target.innerText);
         $('#dropdownMenu1').html(year.Value + '<span class="caret"></span>');
         $('#year-revenue-share').val(year.RevenueShare * 100);
+        $('#year-wholesale-revenue-share').val(year.WholesaleRevenueShare * 100);
         $('#year-sales-cost').val(year.SalesCost);
     })
 
@@ -55,8 +57,9 @@ $(document).ready(function () {
         year = $('#dropdownMenu1').text();
         salesCost = $('#year-sales-cost').val();
         revenueShare = $('#year-revenue-share').val() / 100;
+        wholesaleRevenueShare = $('#year-wholesale-revenue-share').val() / 100;
 
-        updateActiveYear(year, salesCost, revenueShare);
+        updateActiveYear(year, salesCost, revenueShare, wholesaleRevenueShare);
 
         window.location.reload();
     });

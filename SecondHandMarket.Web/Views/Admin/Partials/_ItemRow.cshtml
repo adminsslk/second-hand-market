@@ -9,7 +9,7 @@
     <td class="text-center">@if (Model.Item.Salesman.IsMember) {<text>Ja</text> } else { <text>Nej</text>}</td>
     <td>@Model.Item.Salesman.Phone</td>
     <td>@if (Model.Item.IsExchangeItem){<text>Fyndvara</text>}else{@Model.Item.Price<text> kr</text>}</td>
-    <td>@if (Model.Item.IsExchangeItem){<text></text>}else{@Model.Item.SellersShare<text> kr</text>}
+    <td>@if (Model.Item.IsExchangeItem){<text></text>}else{@Model.Item.SellersShare<text> kr </text><small class="text-muted">@Model.Item.SellersSharePercent()</small>}
     </td>
     <td>
         <div>

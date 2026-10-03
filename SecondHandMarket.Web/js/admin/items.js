@@ -22,7 +22,9 @@ function PrintLabel(phone, itemId) {
         url: url,
         cache: false
     }).done(function (file) {
-        printPdf(host + file);
+        if (file) {
+            printPdf(host + file);
+        }
     });
 }
 
@@ -33,7 +35,9 @@ function PrintLabels(phone) {
         url: url,
         cache: false
     }).done(function (file) {
-        printPdf(host + file);
+        if (file) {
+            printPdf(host + file);
+        }
     });    
 }
 
@@ -74,6 +78,17 @@ function showDeleteForm(id) {
     url = encodeURI(url);
     $.ajax({
         url: url,
+        cache: false,
+        async: true
+    }).done(function (html) {
+        $('#item-dialog').html(html);
+        $('#item-dialog').modal('show');
+    });
+}
+
+function showImportForm() {
+    $.ajax({
+        url: host + "admin/_ImportForm",
         cache: false,
         async: true
     }).done(function (html) {

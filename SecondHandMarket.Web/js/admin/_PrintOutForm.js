@@ -9,5 +9,22 @@ function PrintReceipt(phone) {
     return true;
 }
 
+function ClearNumberOfLabels() {
+    $('#items-body input[type=number]').each(function () {
+        $(this).val(0);
+        updateNumberOfLabels(this);
+    });
+    updatePrintLabelsButton();
+}
+
+function updatePrintLabelsButton() {
+    var hasLabels = $('#items-body input[type=number]').filter(function () {
+        return parseInt($(this).val(), 10) > 0;
+    }).length > 0;
+    $('#print-labels').prop('disabled', !hasLabels);
+}
+
+$('#items-body input[type=number]').on('input change', updatePrintLabelsButton);
+
 
 
