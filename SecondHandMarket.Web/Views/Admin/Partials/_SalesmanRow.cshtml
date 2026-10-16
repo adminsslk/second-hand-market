@@ -10,7 +10,15 @@
     <td>@Model.NumberOfPaidOutItems</td>
     <td>@Model.AmoutToPayOut kr</td>
     <td>@Model.Bank</td>
-    <td>@Model.BankAccount</td> 
+    <td>
+        @if (!String.IsNullOrWhiteSpace(Model.BankAccount))
+        {
+            @Model.BankAccount
+            <button type="button" class="btn btn-xs btn-default" title="Kopiera kontonummer" data-copy="@Model.BankAccount" onclick="copyToClipboard(this, $(this).attr('data-copy'))">
+                <span class="glyphicon glyphicon-copy" aria-hidden="true"></span><span class="sr-only">Kopiera kontonummer</span>
+            </button>
+        }
+    </td>
     <td>
         @if (Model.AmoutToPayOut > 0)
         {

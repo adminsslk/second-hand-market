@@ -31,6 +31,31 @@ namespace SecondHandMarket.Web.ViewModels.Admin
             return CreateViewModel(firstName, lastName, phone, year, pageSize, pageIndex, member);
         }
 
+        //Underlag för kassörens utbetalningar via banköverföring, sorterat på bank
+        public static byte[] CreatePayOutXlsx(int year)
+        {
+            SecondHandMarketContext ctx = new SecondHandMarketContext();
+            List<User> users = ctx.Users.Where(u => u.Items.Any(i => i.Year == year && i.StatusId == 3)).ToList();
+
+            List<SalesmanViewModel> salesmen = users
+                .Select(u => SalesmanViewModel.GetModel(u.Phone, year))
+                .Where(s => s != null && s.AmoutToPayOut > 0)
+                .OrderBy(s => String.IsNullOrWhiteSpace(s.Bank))
+                .ThenBy(s => (s.Bank ?? "").Trim(), StringComparer.CurrentCultureIgnoreCase)
+                .ThenBy(s => s.FullName, StringComparer.CurrentCultureIgnoreCase)
+                .ToList();
+
+            XlsxWriter xlsx = new XlsxWriter();
+            xlsx.SheetName = "Utbetalningar " + year;
+            xlsx.SetColumnWidths(20, 16, 18, 28, 16, 14, 12);
+            xlsx.AddBoldRow("Bank", "Clearingnummer", "Kontonummer", "Namn", "Mobilnummer", "Belopp (kr)", "Antal varor");
+            foreach (SalesmanViewModel s in salesmen)
+                xlsx.AddRow((s.Bank ?? "").Trim(), (s.ClearingNumber ?? "").Trim(), (s.AccountNumber ?? "").Trim(), s.FullName, s.Phone, s.AmoutToPayOut, s.NumberOfSoldItems - s.NumberOfPaidOutItems);
+            xlsx.AddBoldRow("Totalt", null, null, null, null, salesmen.Sum(s => s.AmoutToPayOut), salesmen.Sum(s => s.NumberOfSoldItems - s.NumberOfPaidOutItems));
+
+            return xlsx.ToArray();
+        }
+
         private static SalesmenViewModel CreateViewModel(string firstName, string lastName, string phone, int year, int pageSize, int pageIndex, int member)
         {
             SecondHandMarketContext ctx = new SecondHandMarketContext();
