@@ -184,6 +184,11 @@ namespace SecondHandMarket.Web.Controllers
             return PartialView("Partials/_ItemRow", ItemViewModel.GetModel(id));
         }
 
+        public ActionResult ExportPayOuts(int year)
+        {
+            return File(SalesmenViewModel.CreatePayOutXlsx(year), "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet", "utbetalningar-" + year + "-" + DateTime.Now.ToString("yyyyMMdd-HHmm") + ".xlsx");
+        }
+
         public ActionResult _SalesmanRow(string phone, int year)
         {
             return PartialView("Partials/_SalesmanRow", SalesmanViewModel.GetModel(phone, year));

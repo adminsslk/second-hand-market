@@ -99,7 +99,34 @@ function updateSalemanRow() {
     });
 }
 
+function exportPayOuts() {
+    window.location = host + "admin/ExportPayOuts?year=" + $('#selected-year').val();
+}
+
+//navigator.clipboard kräver https, annars faller vi tillbaka på execCommand
+function copyToClipboard(button, text) {
+    var done = function () {
+        var icon = $(button).find('.glyphicon');
+        icon.removeClass('glyphicon-copy').addClass('glyphicon-ok');
+        setTimeout(function () { icon.removeClass('glyphicon-ok').addClass('glyphicon-copy'); }, 1500);
+    };
+
+    if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(text).then(done);
+        return;
+    }
+
+    var textarea = $('<textarea>').val(text).css({ position: 'fixed', top: 0, left: 0, opacity: 0 }).appendTo('body');
+    textarea[0].select();
+    try {
+        if (document.execCommand('copy'))
+            done();
+    } finally {
+        textarea.remove();
+    }
+}
+
 function submitForm(pageIndex) {
     $('#page-index').val(pageIndex);
     $('#search-form').submit();
-}s
+}

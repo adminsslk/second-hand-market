@@ -12,6 +12,8 @@ namespace SecondHandMarket.Web.ViewModels.Admin
         public string Phone { get; set; }
         public string Bank { get; set; }
         public string BankAccount { get; set; }
+        public string ClearingNumber { get; set; }
+        public string AccountNumber { get; set; }
         public int NumberOfRegiteredItems { get; set; }
         public int NumberOfSoldItems { get; set; }
         public int NumberOfPaidOutItems { get; set; }
@@ -31,7 +33,9 @@ namespace SecondHandMarket.Web.ViewModels.Admin
             viewModel.FullName = user.FullName;
             viewModel.Phone = user.Phone;
             viewModel.Bank = user.Bank;
-            viewModel.BankAccount = user.ClearingNumber + " " + user.AccountNumber;
+            viewModel.BankAccount = (user.ClearingNumber + " " + user.AccountNumber).Trim();
+            viewModel.ClearingNumber = user.ClearingNumber;
+            viewModel.AccountNumber = user.AccountNumber;
             viewModel.NumberOfRegiteredItems = user.Items.Where(i => i.Year == year && (i.StatusId == 2 | i.StatusId == 3 | i.StatusId == 4 | i.StatusId == 5)).Count();
             viewModel.NumberOfSoldItems = user.Items.Where(i => i.Year == year && (i.StatusId == 3 | i.StatusId == 5)).Count();
             viewModel.NumberOfPaidOutItems = user.Items.Where(i => i.Year == year && i.StatusId == 5).Count();

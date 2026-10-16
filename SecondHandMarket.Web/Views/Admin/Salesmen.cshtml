@@ -5,7 +5,7 @@
 
 @section Scripts
 {
-   <script src="~/js/admin/salesmen.js"></script>
+   <script src="~/js/admin/salesmen.js?v=@System.IO.File.GetLastWriteTimeUtc(Server.MapPath("~/js/admin/salesmen.js")).Ticks"></script>
 }
 
 <div class="container">
@@ -21,6 +21,9 @@
                     <br />
                     <div class="row">
                         <div class="col-lg-10 col-md-10">
+                            <button type="button" class="btn btn-default" title="Sparar en Excel-fil med alla säljare som har pengar kvar att få utbetalt, sorterad på bank" onclick="exportPayOuts()">
+                                <span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> EXPORTERA SÄLJARE
+                            </button>
                         </div>
                         <div class="col-lg-2 col-md-2">
                             <div class="input-group">
